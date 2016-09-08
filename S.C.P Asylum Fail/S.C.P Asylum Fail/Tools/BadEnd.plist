@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Branch101</key>
+	<array>
+		<dict>
+			<key>Style</key>
+			<integer>101</integer>
+			<key>Text</key>
+			<string>警告！警告！</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>101</integer>
+			<key>Text</key>
+			<string>D-9587生理活性快速下降，预估在5.47秒后归于零点。</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>101</integer>
+			<key>Text</key>
+			<string>系统失去与D-9587的链接。</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>101</integer>
+			<key>Text</key>
+			<string>D-9587已死</string>
+		</dict>
+	</array>
+</dict>
+</plist>

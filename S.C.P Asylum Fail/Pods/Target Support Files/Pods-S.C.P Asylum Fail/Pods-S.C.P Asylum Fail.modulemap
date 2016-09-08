@@ -1,0 +1,6 @@
+framework module Pods_S_C_P_Asylum_Fail {
+  umbrella header "Pods-S.C.P Asylum Fail-umbrella.h"
+
+  export *
+  module * { export * }
+}
