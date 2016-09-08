@@ -12,8 +12,8 @@ import SnapKit
 enum HomeCellStyle:NSInteger {
     case Instructions = 101
     case Dialogue = 102
-    case OneButton = 104
     case TwoButton = 103
+    case End = 104
     case Notification = 105
 }
 
@@ -32,7 +32,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     
     let instructionsIdentifier = "instructionsIdentifier"
     let dialogueIdentifier = "dialogueIdentifier"
-    let oneButtonIdentifier = "oneButtonIdentifier"
+    let endButtonIdentifier = "endButtonIdentifier"
     let twoButtonIdentifier = "twoButtonIdentifier"
     let notificationIdentifier = "notificationIdentifier"
 
@@ -61,9 +61,9 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
 
         tableView?.registerClass(HomeInstructionsTableViewCell.self, forCellReuseIdentifier: instructionsIdentifier)
         tableView?.registerClass(HomeDialogueTableViewCell.self, forCellReuseIdentifier: dialogueIdentifier)
-        tableView?.registerClass(HomeOneButtonTableViewCell.self, forCellReuseIdentifier: oneButtonIdentifier)
         tableView?.registerClass(HomeButtonTableViewCell.self, forCellReuseIdentifier: twoButtonIdentifier)
         tableView?.registerClass(HomeNotificationCell.self, forCellReuseIdentifier: notificationIdentifier)
+        tableView?.registerClass(HomeEndTableViewCell.self, forCellReuseIdentifier: endButtonIdentifier)
 
         //菜单选项
         menuView = NSBundle.mainBundle().loadNibNamed("HomeMenuView", owner: nil, options: nil).first as? HomeMenuView
@@ -247,12 +247,8 @@ extension HomeViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier(dialogueIdentifier) as? HomeDialogueTableViewCell
             cell?.updateResource(theText)
             return cell!
-        case .OneButton :
-            let cell = tableView.dequeueReusableCellWithIdentifier(oneButtonIdentifier) as? HomeOneButtonTableViewCell
-            cell?.updateResource(theText)
-            cell?.buttonDidClickBlock = { [weak self] buttonTag in
-                self?.getBranch(buttonTag)
-            }
+        case .End :
+            let cell = tableView.dequeueReusableCellWithIdentifier(dialogueIdentifier) as? HomeEndTableViewCell
             return cell!
         case .TwoButton :
             let cell = tableView.dequeueReusableCellWithIdentifier(twoButtonIdentifier) as? HomeButtonTableViewCell

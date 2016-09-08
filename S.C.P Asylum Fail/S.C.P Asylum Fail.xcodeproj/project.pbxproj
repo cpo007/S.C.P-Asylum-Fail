@@ -26,8 +26,8 @@
 		382A3C3C1D6718780093B51A /* TheText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C3B1D6718780093B51A /* TheText.swift */; };
 		382A3C401D6AA74E0093B51A /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C3F1D6AA74E0093B51A /* BaseTableViewCell.swift */; };
 		382A3C441D6AD88F0093B51A /* HomeDialogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C431D6AD88F0093B51A /* HomeDialogueTableViewCell.swift */; };
-		382A3C461D6ADB960093B51A /* HomeOneButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C451D6ADB960093B51A /* HomeOneButtonTableViewCell.swift */; };
 		382A3C4B1D6AF3370093B51A /* NSTimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C4A1D6AF3370093B51A /* NSTimerExtension.swift */; };
+		38B402CE1D8134C9009959A5 /* HomeEndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */; };
 		38FC5DBD1D19457E00D115AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC5DBC1D19457E00D115AD /* AppDelegate.swift */; };
 		38FC5DC41D19457E00D115AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FC5DC31D19457E00D115AD /* Assets.xcassets */; };
 		38FC5DC71D19457E00D115AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FC5DC51D19457E00D115AD /* LaunchScreen.storyboard */; };
@@ -74,8 +74,8 @@
 		382A3C3B1D6718780093B51A /* TheText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheText.swift; sourceTree = "<group>"; };
 		382A3C3F1D6AA74E0093B51A /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		382A3C431D6AD88F0093B51A /* HomeDialogueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDialogueTableViewCell.swift; sourceTree = "<group>"; };
-		382A3C451D6ADB960093B51A /* HomeOneButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeOneButtonTableViewCell.swift; sourceTree = "<group>"; };
 		382A3C4A1D6AF3370093B51A /* NSTimerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerExtension.swift; sourceTree = "<group>"; };
+		38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEndTableViewCell.swift; sourceTree = "<group>"; };
 		38FC5DB91D19457E00D115AD /* S.C.P Asylum Fail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S.C.P Asylum Fail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FC5DBC1D19457E00D115AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38FC5DC31D19457E00D115AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -239,8 +239,8 @@
 				382A3C331D64716C0093B51A /* HomeInstructionsTableViewCell.swift */,
 				382A3C431D6AD88F0093B51A /* HomeDialogueTableViewCell.swift */,
 				382A3C351D64717A0093B51A /* HomeButtonTableViewCell.swift */,
-				382A3C451D6ADB960093B51A /* HomeOneButtonTableViewCell.swift */,
 				3821A9D91D77C8FC0071FD01 /* HomeNotificationCell.swift */,
+				38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */,
 				3821AA1F1D7D4EE50071FD01 /* HomeMenuView.swift */,
 				3821AA211D7D514B0071FD01 /* HomeMenuView.xib */,
 			);
@@ -606,6 +606,7 @@
 			files = (
 				382A3C361D64717A0093B51A /* HomeButtonTableViewCell.swift in Sources */,
 				382A3C321D6423310093B51A /* HomeTableView.swift in Sources */,
+				38B402CE1D8134C9009959A5 /* HomeEndTableViewCell.swift in Sources */,
 				382A3C2F1D6422950093B51A /* HomeViewController.swift in Sources */,
 				3821A9DA1D77C8FC0071FD01 /* HomeNotificationCell.swift in Sources */,
 				382A3C201D641FE10093B51A /* BaseNavigationController.swift in Sources */,
@@ -619,7 +620,6 @@
 				3821AA1D1D79818A0071FD01 /* EPDocumentBaseView.swift in Sources */,
 				382A3C341D64716C0093B51A /* HomeInstructionsTableViewCell.swift in Sources */,
 				382A3C401D6AA74E0093B51A /* BaseTableViewCell.swift in Sources */,
-				382A3C461D6ADB960093B51A /* HomeOneButtonTableViewCell.swift in Sources */,
 				382A3C4B1D6AF3370093B51A /* NSTimerExtension.swift in Sources */,
 				382A3C3C1D6718780093B51A /* TheText.swift in Sources */,
 			);

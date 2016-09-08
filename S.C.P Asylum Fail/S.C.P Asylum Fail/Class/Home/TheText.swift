@@ -68,7 +68,7 @@ class TheText: NSObject,NSCoding {
             CellStyle = HomeCellStyle.TwoButton
             break
         case 104 :
-            CellStyle = HomeCellStyle.OneButton
+            CellStyle = HomeCellStyle.End
             break
         case 105 :
             CellStyle = HomeCellStyle.Notification
