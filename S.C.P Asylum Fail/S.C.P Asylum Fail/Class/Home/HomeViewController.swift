@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 enum HomeCellStyle:NSInteger {
     case instructions = 101
@@ -64,41 +65,43 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         tableView?.register(HomeNotificationCell.self, forCellReuseIdentifier: notificationIdentifier)
         tableView?.register(HomeEndTableViewCell.self, forCellReuseIdentifier: endButtonIdentifier)
 
-//        //菜单选项
-//        menuView = Bundle.main.loadNibNamed("HomeMenuView", owner: nil, options: nil)?.first as? HomeMenuView
-//        view.addSubview(menuView!)
-//        menuView?.snp_makeConstraints(closure: { (make) in
-//            make.centerX.equalTo(view)
-//            make.top.equalTo(view.snp_bottom).offset(-50)
-//            make.leading.equalTo(view).offset(44)
-//            make.trailing.equalTo(view).offset(-44)
-//            make.height.equalTo(Height / 3)
-//        })
-//            menuView?.backgroundColor = ColorPurple()
-//        
-//        menuView?.buttonDidClickBlock = { [weak self] tag in
-//            switch tag {
-//            case 201 :
-//                self?.updateMenuView()
-//                break
-//            case 202:
-//                self?.present(ArchivesViewController(), animated: true, completion: nil)
-//                break
-//            default :
-//                break
-//            }
-//        }
+        //菜单选项
+        menuView = Bundle.main.loadNibNamed("HomeMenuView", owner: nil, options: nil)?.first as? HomeMenuView
+        view.addSubview(menuView!)
+        menuView?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(view)
+            make.top.equalTo(view.snp.bottom).offset(-50)
+            make.leading.equalTo(view).offset(44)
+            make.trailing.equalTo(view).offset(-44)
+            make.height.equalTo(Height / 3)
+        })
+            menuView?.backgroundColor = ColorPurple()
+        
+        menuView?.buttonDidClickBlock = { [weak self] tag in
+            switch tag {
+            case 201 :
+                self?.updateMenuView()
+                break
+            case 202:
+                self?.present(ArchivesViewController(), animated: true, completion: nil)
+                break
+            default :
+                break
+            }
+        }
     }
     
     func updateMenuView() {
+    
         
-//        menuView?.snp_updateConstraints(closure: { (make) in
-//            make.top.equalTo(view.snp_bottom).offset(isPop ? -50 : -(Height / 3))
-//        })
-//        UIView.animate(withDuration: 0.3, animations: {
-//            self.menuView?.layoutIfNeeded()
-//        }) 
-//        isPop = !isPop
+        menuView?.snp.updateConstraints({ (make) in
+            make.top.equalTo(view.snp.bottom).offset(isPop ? -50 : -(Height / 3))
+        })
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        })
+        isPop = !isPop
     }
     
     func getStory() {
@@ -250,6 +253,13 @@ extension HomeViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: endButtonIdentifier) as? HomeEndTableViewCell
             cell?.updateResource(theText)
             cell?.endBlock = { [weak self] in
+                guard let endView = Bundle.main.loadNibNamed("HomeEndView", owner: nil, options: nil)?.first as? HomeEndView else { return }
+                endView.frame = Bounds
+                endView.alpha = 0
+                self?.view.addSubview(endView)
+                UIView.animate(withDuration: 0.3, animations: { 
+                    endView.alpha = 1
+                })
                 print("Game Over")
             }
             return cell!

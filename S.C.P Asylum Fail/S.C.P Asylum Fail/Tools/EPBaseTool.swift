@@ -26,7 +26,7 @@ func getLabel(text:String, font:UIFont?, color:UIColor) -> UILabel{
 
 //创建一个普通按钮
 func getNormalButton(_ target:AnyObject,action:Selector,Title:String ,font:UIFont? = nil,color:UIColor? = nil,tag:NSInteger? = nil) -> UIButton{
-    let button = UIButton()
+    let button = BaseButton()
     button.adjustsImageWhenHighlighted = false
     button.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
     button.setTitle(Title, for: UIControlState())

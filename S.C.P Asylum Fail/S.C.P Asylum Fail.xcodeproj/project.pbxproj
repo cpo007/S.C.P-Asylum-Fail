@@ -26,32 +26,16 @@
 		382A3C401D6AA74E0093B51A /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C3F1D6AA74E0093B51A /* BaseTableViewCell.swift */; };
 		382A3C441D6AD88F0093B51A /* HomeDialogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C431D6AD88F0093B51A /* HomeDialogueTableViewCell.swift */; };
 		382A3C4B1D6AF3370093B51A /* NSTimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C4A1D6AF3370093B51A /* NSTimerExtension.swift */; };
+		387D05131D8FC5BC006870F8 /* HomeEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D05121D8FC5BC006870F8 /* HomeEndView.swift */; };
+		387D05151D8FC5C8006870F8 /* HomeEndView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387D05141D8FC5C8006870F8 /* HomeEndView.xib */; };
 		38B402CE1D8134C9009959A5 /* HomeEndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */; };
 		38B402D01D8150D0009959A5 /* ArchiveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B402CF1D8150D0009959A5 /* ArchiveDetailViewController.swift */; };
+		38F286AD1D8FD01600A44478 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F286AC1D8FD01600A44478 /* BaseButton.swift */; };
 		38FC5DBD1D19457E00D115AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC5DBC1D19457E00D115AD /* AppDelegate.swift */; };
 		38FC5DC41D19457E00D115AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FC5DC31D19457E00D115AD /* Assets.xcassets */; };
 		38FC5DC71D19457E00D115AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FC5DC51D19457E00D115AD /* LaunchScreen.storyboard */; };
-		38FC5DD21D19457F00D115AD /* S_C_P_Asylum_FailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC5DD11D19457F00D115AD /* S_C_P_Asylum_FailTests.swift */; };
-		38FC5DDD1D19457F00D115AD /* S_C_P_Asylum_FailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC5DDC1D19457F00D115AD /* S_C_P_Asylum_FailUITests.swift */; };
 		86B42E3C62C9BD842E88119E /* Pods_S_C_P_Asylum_Fail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179568853C3009E576CBB9F6 /* Pods_S_C_P_Asylum_Fail.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		38FC5DCE1D19457F00D115AD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38FC5DB11D19457E00D115AD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 38FC5DB81D19457E00D115AD;
-			remoteInfo = "S.C.P Asylum Fail";
-		};
-		38FC5DD91D19457F00D115AD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38FC5DB11D19457E00D115AD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 38FC5DB81D19457E00D115AD;
-			remoteInfo = "S.C.P Asylum Fail";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		179568853C3009E576CBB9F6 /* Pods_S_C_P_Asylum_Fail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S_C_P_Asylum_Fail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,19 +58,16 @@
 		382A3C3F1D6AA74E0093B51A /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		382A3C431D6AD88F0093B51A /* HomeDialogueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDialogueTableViewCell.swift; sourceTree = "<group>"; };
 		382A3C4A1D6AF3370093B51A /* NSTimerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerExtension.swift; sourceTree = "<group>"; };
+		387D05121D8FC5BC006870F8 /* HomeEndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEndView.swift; sourceTree = "<group>"; };
+		387D05141D8FC5C8006870F8 /* HomeEndView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeEndView.xib; sourceTree = "<group>"; };
 		38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEndTableViewCell.swift; sourceTree = "<group>"; };
 		38B402CF1D8150D0009959A5 /* ArchiveDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveDetailViewController.swift; sourceTree = "<group>"; };
+		38F286AC1D8FD01600A44478 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		38FC5DB91D19457E00D115AD /* S.C.P Asylum Fail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S.C.P Asylum Fail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FC5DBC1D19457E00D115AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38FC5DC31D19457E00D115AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38FC5DC61D19457E00D115AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38FC5DC81D19457E00D115AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38FC5DCD1D19457F00D115AD /* S.C.P Asylum FailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "S.C.P Asylum FailTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		38FC5DD11D19457F00D115AD /* S_C_P_Asylum_FailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S_C_P_Asylum_FailTests.swift; sourceTree = "<group>"; };
-		38FC5DD31D19457F00D115AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38FC5DD81D19457F00D115AD /* S.C.P Asylum FailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "S.C.P Asylum FailUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		38FC5DDC1D19457F00D115AD /* S_C_P_Asylum_FailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S_C_P_Asylum_FailUITests.swift; sourceTree = "<group>"; };
-		38FC5DDE1D19457F00D115AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4098DBC706701971BC6B1F63 /* Pods_S_C_P_Asylum_FailUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S_C_P_Asylum_FailUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99AE1FE3226AD185D37C9087 /* Pods-S.C.P Asylum Fail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S.C.P Asylum Fail.release.xcconfig"; path = "Pods/Target Support Files/Pods-S.C.P Asylum Fail/Pods-S.C.P Asylum Fail.release.xcconfig"; sourceTree = "<group>"; };
 		DD1262CD7027ABD8410704B6 /* Pods_S_C_P_Asylum_FailTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S_C_P_Asylum_FailTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,20 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				86B42E3C62C9BD842E88119E /* Pods_S_C_P_Asylum_Fail.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38FC5DCA1D19457F00D115AD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38FC5DD51D19457F00D115AD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +155,7 @@
 				382A3C1F1D641FE10093B51A /* BaseNavigationController.swift */,
 				382A3C211D641FEE0093B51A /* BaseViewController.swift */,
 				382A3C3F1D6AA74E0093B51A /* BaseTableViewCell.swift */,
+				38F286AC1D8FD01600A44478 /* BaseButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -236,6 +204,8 @@
 				38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */,
 				3821AA1F1D7D4EE50071FD01 /* HomeMenuView.swift */,
 				3821AA211D7D514B0071FD01 /* HomeMenuView.xib */,
+				387D05121D8FC5BC006870F8 /* HomeEndView.swift */,
+				387D05141D8FC5C8006870F8 /* HomeEndView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -277,8 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				38FC5DBB1D19457E00D115AD /* S.C.P Asylum Fail */,
-				38FC5DD01D19457F00D115AD /* S.C.P Asylum FailTests */,
-				38FC5DDB1D19457F00D115AD /* S.C.P Asylum FailUITests */,
 				38FC5DBA1D19457E00D115AD /* Products */,
 				26BBDE3162798F052A19A93B /* Pods */,
 				9AB503D3F283A0F804CE1C94 /* Frameworks */,
@@ -289,8 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				38FC5DB91D19457E00D115AD /* S.C.P Asylum Fail.app */,
-				38FC5DCD1D19457F00D115AD /* S.C.P Asylum FailTests.xctest */,
-				38FC5DD81D19457F00D115AD /* S.C.P Asylum FailUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,24 +275,6 @@
 				38FC5DC81D19457E00D115AD /* Info.plist */,
 			);
 			path = "S.C.P Asylum Fail";
-			sourceTree = "<group>";
-		};
-		38FC5DD01D19457F00D115AD /* S.C.P Asylum FailTests */ = {
-			isa = PBXGroup;
-			children = (
-				38FC5DD11D19457F00D115AD /* S_C_P_Asylum_FailTests.swift */,
-				38FC5DD31D19457F00D115AD /* Info.plist */,
-			);
-			path = "S.C.P Asylum FailTests";
-			sourceTree = "<group>";
-		};
-		38FC5DDB1D19457F00D115AD /* S.C.P Asylum FailUITests */ = {
-			isa = PBXGroup;
-			children = (
-				38FC5DDC1D19457F00D115AD /* S_C_P_Asylum_FailUITests.swift */,
-				38FC5DDE1D19457F00D115AD /* Info.plist */,
-			);
-			path = "S.C.P Asylum FailUITests";
 			sourceTree = "<group>";
 		};
 		9AB503D3F283A0F804CE1C94 /* Frameworks */ = {
@@ -362,47 +310,6 @@
 			productReference = 38FC5DB91D19457E00D115AD /* S.C.P Asylum Fail.app */;
 			productType = "com.apple.product-type.application";
 		};
-		38FC5DCC1D19457F00D115AD /* S.C.P Asylum FailTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 38FC5DE41D19457F00D115AD /* Build configuration list for PBXNativeTarget "S.C.P Asylum FailTests" */;
-			buildPhases = (
-				1B864FEF92E32D950433A981 /* [CP] Check Pods Manifest.lock */,
-				38FC5DC91D19457F00D115AD /* Sources */,
-				38FC5DCA1D19457F00D115AD /* Frameworks */,
-				38FC5DCB1D19457F00D115AD /* Resources */,
-				E84982349021582DC8395604 /* [CP] Embed Pods Frameworks */,
-				136E92D9DC54B041449735DF /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				38FC5DCF1D19457F00D115AD /* PBXTargetDependency */,
-			);
-			name = "S.C.P Asylum FailTests";
-			productName = "S.C.P Asylum FailTests";
-			productReference = 38FC5DCD1D19457F00D115AD /* S.C.P Asylum FailTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		38FC5DD71D19457F00D115AD /* S.C.P Asylum FailUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 38FC5DE71D19457F00D115AD /* Build configuration list for PBXNativeTarget "S.C.P Asylum FailUITests" */;
-			buildPhases = (
-				4598068338E2B3E8CB012D32 /* [CP] Check Pods Manifest.lock */,
-				38FC5DD41D19457F00D115AD /* Sources */,
-				38FC5DD51D19457F00D115AD /* Frameworks */,
-				38FC5DD61D19457F00D115AD /* Resources */,
-				ABA376C653B2E1EF6DD27165 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				38FC5DDA1D19457F00D115AD /* PBXTargetDependency */,
-			);
-			name = "S.C.P Asylum FailUITests";
-			productName = "S.C.P Asylum FailUITests";
-			productReference = 38FC5DD81D19457F00D115AD /* S.C.P Asylum FailUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -416,16 +323,6 @@
 					38FC5DB81D19457E00D115AD = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0800;
-					};
-					38FC5DCC1D19457F00D115AD = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
-						TestTargetID = 38FC5DB81D19457E00D115AD;
-					};
-					38FC5DD71D19457F00D115AD = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
-						TestTargetID = 38FC5DB81D19457E00D115AD;
 					};
 				};
 			};
@@ -443,8 +340,6 @@
 			projectRoot = "";
 			targets = (
 				38FC5DB81D19457E00D115AD /* S.C.P Asylum Fail */,
-				38FC5DCC1D19457F00D115AD /* S.C.P Asylum FailTests */,
-				38FC5DD71D19457F00D115AD /* S.C.P Asylum FailUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -456,6 +351,7 @@
 			files = (
 				38FC5DC71D19457E00D115AD /* LaunchScreen.storyboard in Resources */,
 				38FC5DC41D19457E00D115AD /* Assets.xcassets in Resources */,
+				387D05151D8FC5C8006870F8 /* HomeEndView.xib in Resources */,
 				3821AA221D7D514B0071FD01 /* HomeMenuView.xib in Resources */,
 				382A3C391D66F50F0093B51A /* Prologue.plist in Resources */,
 				3821AA2B1D7D99BC0071FD01 /* BadEnd.plist in Resources */,
@@ -463,53 +359,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38FC5DCB1D19457F00D115AD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38FC5DD61D19457F00D115AD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		136E92D9DC54B041449735DF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-S.C.P Asylum FailTests/Pods-S.C.P Asylum FailTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1B864FEF92E32D950433A981 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		2BCD9FE4CE24AE33CF470333 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,21 +375,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-S.C.P Asylum Fail/Pods-S.C.P Asylum Fail-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4598068338E2B3E8CB012D32 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5B38AF0B45ACDFB2A668D90D /* [CP] Check Pods Manifest.lock */ = {
@@ -570,36 +407,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-S.C.P Asylum Fail/Pods-S.C.P Asylum Fail-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ABA376C653B2E1EF6DD27165 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-S.C.P Asylum FailUITests/Pods-S.C.P Asylum FailUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E84982349021582DC8395604 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-S.C.P Asylum FailTests/Pods-S.C.P Asylum FailTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -608,10 +415,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				382A3C361D64717A0093B51A /* HomeButtonTableViewCell.swift in Sources */,
+				387D05131D8FC5BC006870F8 /* HomeEndView.swift in Sources */,
 				382A3C321D6423310093B51A /* HomeTableView.swift in Sources */,
 				38B402CE1D8134C9009959A5 /* HomeEndTableViewCell.swift in Sources */,
 				382A3C2F1D6422950093B51A /* HomeViewController.swift in Sources */,
 				3821A9DA1D77C8FC0071FD01 /* HomeNotificationCell.swift in Sources */,
+				38F286AD1D8FD01600A44478 /* BaseButton.swift in Sources */,
 				382A3C201D641FE10093B51A /* BaseNavigationController.swift in Sources */,
 				38FC5DBD1D19457E00D115AD /* AppDelegate.swift in Sources */,
 				3821AA291D7D69D70071FD01 /* TheArchives.swift in Sources */,
@@ -628,36 +437,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38FC5DC91D19457F00D115AD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				38FC5DD21D19457F00D115AD /* S_C_P_Asylum_FailTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38FC5DD41D19457F00D115AD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				38FC5DDD1D19457F00D115AD /* S_C_P_Asylum_FailUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		38FC5DCF1D19457F00D115AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 38FC5DB81D19457E00D115AD /* S.C.P Asylum Fail */;
-			targetProxy = 38FC5DCE1D19457F00D115AD /* PBXContainerItemProxy */;
-		};
-		38FC5DDA1D19457F00D115AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 38FC5DB81D19457E00D115AD /* S.C.P Asylum Fail */;
-			targetProxy = 38FC5DD91D19457F00D115AD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		38FC5DC51D19457E00D115AD /* LaunchScreen.storyboard */ = {
@@ -791,56 +571,6 @@
 			};
 			name = Release;
 		};
-		38FC5DE51D19457F00D115AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "S.C.P Asylum FailTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eggplant.S-C-P-Asylum-FailTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/S.C.P Asylum Fail.app/S.C.P Asylum Fail";
-			};
-			name = Debug;
-		};
-		38FC5DE61D19457F00D115AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "S.C.P Asylum FailTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eggplant.S-C-P-Asylum-FailTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/S.C.P Asylum Fail.app/S.C.P Asylum Fail";
-			};
-			name = Release;
-		};
-		38FC5DE81D19457F00D115AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "S.C.P Asylum FailUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eggplant.S-C-P-Asylum-FailUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "S.C.P Asylum Fail";
-			};
-			name = Debug;
-		};
-		38FC5DE91D19457F00D115AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "S.C.P Asylum FailUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eggplant.S-C-P-Asylum-FailUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "S.C.P Asylum Fail";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -858,24 +588,6 @@
 			buildConfigurations = (
 				38FC5DE21D19457F00D115AD /* Debug */,
 				38FC5DE31D19457F00D115AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		38FC5DE41D19457F00D115AD /* Build configuration list for PBXNativeTarget "S.C.P Asylum FailTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				38FC5DE51D19457F00D115AD /* Debug */,
-				38FC5DE61D19457F00D115AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		38FC5DE71D19457F00D115AD /* Build configuration list for PBXNativeTarget "S.C.P Asylum FailUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				38FC5DE81D19457F00D115AD /* Debug */,
-				38FC5DE91D19457F00D115AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

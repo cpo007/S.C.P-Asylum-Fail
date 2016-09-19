@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,54 +12,46 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAT-zL-v5o">
-                    <rect key="frame" x="15" y="50" width="225" height="198"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bKa-4T-EHg">
-                            <rect key="frame" x="15" y="10" width="87" height="178"/>
                             <subviews>
                                 <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgo-Zp-Aor">
-                                    <rect key="frame" x="0.0" y="0.0" width="87" height="60"/>
                                     <state key="normal" title="S.C.P 档案"/>
                                     <connections>
                                         <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="yKF-oE-lzE"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUv-iw-HWT">
-                                    <rect key="frame" x="0.0" y="60" width="87" height="59"/>
                                     <state key="normal" title="Button"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cB-WN-nLu">
-                                    <rect key="frame" x="0.0" y="119" width="87" height="60"/>
                                     <state key="normal" title="Button"/>
                                 </button>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-UL-wub">
-                            <rect key="frame" x="133" y="10" width="87" height="178"/>
+                            <frame key="frameInset" minX="133" minY="10" width="87" height="178"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-0H-Zax">
-                                    <rect key="frame" x="0.0" y="0.0" width="87" height="60"/>
                                     <state key="normal" title="Button"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLz-ey-uci">
-                                    <rect key="frame" x="0.0" y="60" width="87" height="59"/>
                                     <state key="normal" title="Button"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-lt-gz8">
-                                    <rect key="frame" x="0.0" y="119" width="87" height="60"/>
                                     <state key="normal" title="Button"/>
                                 </button>
                             </subviews>
                         </stackView>
                         <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Otx-Vs-MXC">
-                            <rect key="frame" x="121" y="0.0" width="1" height="211"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <frame key="frameInset" minX="121" width="1" height="211"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="5dc-0K-VbC"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="Otx-Vs-MXC" firstAttribute="leading" secondItem="bKa-4T-EHg" secondAttribute="trailing" constant="10" id="0re-h0-uf6"/>
                         <constraint firstItem="Otx-Vs-MXC" firstAttribute="top" secondItem="GAT-zL-v5o" secondAttribute="top" id="6xc-ZE-a3O"/>
@@ -74,7 +67,6 @@
                     </constraints>
                 </view>
                 <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmJ-2x-QTO">
-                    <rect key="frame" x="101" y="10" width="46" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="1G7-oh-Xw8"/>
                     </constraints>
@@ -84,7 +76,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="cmJ-2x-QTO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0Uh-Ij-vEg"/>
                 <constraint firstAttribute="trailing" secondItem="GAT-zL-v5o" secondAttribute="trailing" constant="8" id="WQT-ex-T2y"/>

@@ -15,10 +15,6 @@ class ArchivesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupResource()
-//        let epDocumentView = EPDocumentBaseView(frame: view.frame, array: theArchivesArray)
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(ArchivesViewController.viewDidClick))
-//        epDocumentView.addGestureRecognizer(tap)
-//        view.addSubview(epDocumentView)
     }
     
     func viewDidClick() {
