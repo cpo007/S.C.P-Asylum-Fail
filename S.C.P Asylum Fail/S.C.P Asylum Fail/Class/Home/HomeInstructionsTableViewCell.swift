@@ -23,13 +23,13 @@ class HomeInstructionsTableViewCell: BaseTableViewCell {
     }
     
     func setupUI() {
-        let textLbl = getLabel(text: "Tesasdasdasdasdast", font: UIFont.systemFontOfSize(14), color: ColorYellow())
-        textLbl.textAlignment = .Center
+        let textLbl = getLabel(text: "Tesasdasdasdasdast", font: UIFont.systemFont(ofSize: 14), color: ColorYellow())
+        textLbl.textAlignment = .center
         addSubview(textLbl)
         self.textLbl = textLbl
     }
     
-    override func updateResource(theText: TheText) {
+    override func updateResource(_ theText: TheText) {
         super.updateResource(theText)
         textLbl?.text = theText.Text
     }

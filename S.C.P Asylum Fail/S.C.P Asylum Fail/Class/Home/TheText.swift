@@ -40,44 +40,44 @@ class TheText: NSObject,NSCoding {
     
     required init?(coder aDecoder: NSCoder) {
         super.init()
-        Style = aDecoder.decodeObjectForKey("Style") as! NSNumber
-        Text = aDecoder.decodeObjectForKey("Text") as! String
-        SubText = aDecoder.decodeObjectForKey("SubText") as! String
-        LeftButton = aDecoder.decodeObjectForKey("LeftButton") as? TheButton
-        RightButton = aDecoder.decodeObjectForKey("RightButton") as? TheButton
-        setCellStyle(aDecoder.decodeObjectForKey("Style") as! NSNumber)
+        Style = aDecoder.decodeObject(forKey: "Style") as! NSNumber
+        Text = aDecoder.decodeObject(forKey: "Text") as! String
+        SubText = aDecoder.decodeObject(forKey: "SubText") as! String
+        LeftButton = aDecoder.decodeObject(forKey: "LeftButton") as? TheButton
+        RightButton = aDecoder.decodeObject(forKey: "RightButton") as? TheButton
+        setCellStyle(aDecoder.decodeObject(forKey: "Style") as! NSNumber)
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(Style, forKey: "Style")
-        aCoder.encodeObject(Text, forKey: "Text")
-        aCoder.encodeObject(SubText, forKey: "SubText")
-        aCoder.encodeObject(LeftButton, forKey: "LeftButton")
-        aCoder.encodeObject(RightButton, forKey: "RightButton")
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(Style, forKey: "Style")
+        aCoder.encode(Text, forKey: "Text")
+        aCoder.encode(SubText, forKey: "SubText")
+        aCoder.encode(LeftButton, forKey: "LeftButton")
+        aCoder.encode(RightButton, forKey: "RightButton")
     }
     
-    func setCellStyle(number:NSNumber) {
+    func setCellStyle(_ number:NSNumber) {
         switch number {
         case 101 :
-            CellStyle = HomeCellStyle.Instructions
+            CellStyle = HomeCellStyle.instructions
             break
         case 102 :
-            CellStyle = HomeCellStyle.Dialogue
+            CellStyle = HomeCellStyle.dialogue
             break
         case 103 :
-            CellStyle = HomeCellStyle.TwoButton
+            CellStyle = HomeCellStyle.twoButton
             break
         case 104 :
-            CellStyle = HomeCellStyle.End
+            CellStyle = HomeCellStyle.end
             break
         case 105 :
-            CellStyle = HomeCellStyle.Notification
+            CellStyle = HomeCellStyle.notification
         default :
             break
         }
     }
     
-    override func setValue(value: AnyObject?, forUndefinedKey key: String) {}
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
     
 }
 
@@ -85,7 +85,7 @@ class TheButton: NSObject,NSCoding {
     
     var Branch = 0
     var Text:String?
-    var PlistName = ""
+    var PlistName:String?
     var isSelectod = false
     
     init(dict:[String:AnyObject]) {
@@ -97,19 +97,20 @@ class TheButton: NSObject,NSCoding {
     
     required init?(coder aDecoder: NSCoder) {
         super.init()
-        Branch = aDecoder.decodeObjectForKey("Branch") as! Int
-        Text = aDecoder.decodeObjectForKey("Text") as? String
-        PlistName = aDecoder.decodeObjectForKey("PlistName") as! String
-        isSelectod = aDecoder.decodeObjectForKey("isSelectod") as! Bool
+        Branch = aDecoder.decodeInteger(forKey: "Branch")
+        Text = aDecoder.decodeObject(forKey: "Text") as? String
+        PlistName = aDecoder.decodeObject(forKey: "PlistName") as? String
+        isSelectod = aDecoder.decodeBool(forKey: "isSelectod")
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(Branch, forKey: "Branch")
-        aCoder.encodeObject(Text, forKey: "Text")
-        aCoder.encodeObject(PlistName, forKey: "PlistName")
-        aCoder.encodeObject(isSelectod, forKey: "isSelectod")
+    func encode(with aCoder: NSCoder) {
+        print(Branch)
+        aCoder.encode(Branch, forKey: "Branch")
+        aCoder.encode(Text, forKey: "Text")
+        aCoder.encode(PlistName, forKey: "PlistName")
+        aCoder.encode(isSelectod, forKey: "isSelectod")
     }
     
-    override func setValue(value: AnyObject?, forUndefinedKey key: String) {}
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
 
 }

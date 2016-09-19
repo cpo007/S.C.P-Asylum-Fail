@@ -23,16 +23,16 @@ class HomeNotificationCell: BaseTableViewCell {
     }
     
     func setupUI() {
-        let textLbl = getLabel(text: "Tesasdasdasdasdast", font: UIFont.systemFontOfSize(14), color: ColorYellow())
-        textLbl.textAlignment = .Center
+        let textLbl = getLabel(text: "Tesasdasdasdasdast", font: UIFont.systemFont(ofSize: 14), color: ColorYellow())
+        textLbl.textAlignment = .center
         addSubview(textLbl)
         self.textLbl = textLbl
     }
     
-    override func updateResource(theText: TheText) {
+    override func updateResource(_ theText: TheText) {
         super.updateResource(theText)
         textLbl?.text = theText.Text
-        if theText.NotificationTime.integerValue > 0 {
+        if theText.NotificationTime.intValue > 0 {
             registerLocalNotification(theText.NotificationTime.doubleValue)
         }
     }

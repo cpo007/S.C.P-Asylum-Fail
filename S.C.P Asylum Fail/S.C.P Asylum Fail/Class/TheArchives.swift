@@ -42,7 +42,7 @@ class TheArchives: NSObject {
 //        aCoder.encodeObject(isSelectod, forKey: "isSelectod")
 //    }
 //    
-    override func setValue(value: AnyObject?, forUndefinedKey key: String) {}
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
 
 }
 

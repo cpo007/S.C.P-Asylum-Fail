@@ -23,12 +23,12 @@ class HomeDialogueTableViewCell: BaseTableViewCell {
     }
     
     func setupUI() {
-        let textLbl = getLabel(text: "Test", font: UIFont.systemFontOfSize(14), color: ColorBlue())
+        let textLbl = getLabel(text: "Test", font: UIFont.systemFont(ofSize: 14), color: ColorBlue())
         addSubview(textLbl)
         self.textLbl = textLbl
     }
     
-    override func updateResource(theText: TheText) {
+    override func updateResource(_ theText: TheText) {
         super.updateResource(theText)
         textLbl?.text = theText.Text
     }

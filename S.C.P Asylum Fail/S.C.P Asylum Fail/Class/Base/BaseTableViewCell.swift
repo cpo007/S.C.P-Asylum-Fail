@@ -11,7 +11,7 @@ import UIKit
 class BaseTableViewCell: UITableViewCell {
 
     var theText:TheText?
-    var buttonDidClickBlock:((buttonTag:NSNumber?)->())?
+    var buttonDidClickBlock:((_ buttonTag:NSNumber?)->())?
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -22,7 +22,7 @@ class BaseTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func updateResource(theText:TheText) {
+    func updateResource(_ theText:TheText) {
         self.theText = theText
     }
 

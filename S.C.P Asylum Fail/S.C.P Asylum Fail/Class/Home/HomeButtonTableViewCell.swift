@@ -30,57 +30,57 @@ class HomeButtonTableViewCell: BaseTableViewCell {
     }
     func setupUI() {
         let leftButton = getNormalButton(self, action: #selector(HomeButtonTableViewCell.buttonDidClick(_:)), Title: "Test", font: nil, color: nil, tag: buttonType.left.rawValue)
-        leftButton.titleLabel?.font = UIFont.systemFontOfSize(14)
+        leftButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         leftButton.titleLabel?.numberOfLines = 0
         addSubview(leftButton)
         self.leftButton = leftButton
         
         let rightButton = getNormalButton(self, action: #selector(HomeButtonTableViewCell.buttonDidClick(_:)), Title: "Test", font: nil, color: nil, tag: buttonType.right.rawValue)
-        rightButton.titleLabel?.font = UIFont.systemFontOfSize(14)
+        rightButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         rightButton.titleLabel?.numberOfLines = 0
         addSubview(rightButton)
         self.rightButton = rightButton
     }
     
-    func buttonDidClick(sender: UIButton) {
-        userInteractionEnabled = false
-        sender.selected = true
+    func buttonDidClick(_ sender: UIButton) {
+        isUserInteractionEnabled = false
+        sender.isSelected = true
         switch sender.tag {
         case buttonType.left.rawValue :
             print("左键点击:\(theText?.LeftButton?.Branch)")
-            rightButton?.enabled = false
+            rightButton?.isEnabled = false
             break
         case buttonType.right.rawValue :
             print("右键点击:\(theText?.RightButton?.Branch)")
-            leftButton?.enabled = false
+            leftButton?.isEnabled = false
             break
         default :
             break
         }
-        buttonDidClickBlock?(buttonTag: sender.tag)
+        buttonDidClickBlock?(sender.tag as NSNumber?)
     }
     
-    override func updateResource(theText: TheText) {
+    override func updateResource(_ theText: TheText) {
         super.updateResource(theText)
         
-        userInteractionEnabled = true
-        leftButton?.enabled = true
-        leftButton?.selected = false
-        rightButton?.enabled = true
-        rightButton?.selected = false
+        isUserInteractionEnabled = true
+        leftButton?.isEnabled = true
+        leftButton?.isSelected = false
+        rightButton?.isEnabled = true
+        rightButton?.isSelected = false
 
-        leftButton?.setTitle(theText.LeftButton?.Text, forState: UIControlState.Normal)
-        rightButton?.setTitle(theText.RightButton?.Text, forState: UIControlState.Normal)
+        leftButton?.setTitle(theText.LeftButton?.Text, for: UIControlState())
+        rightButton?.setTitle(theText.RightButton?.Text, for: UIControlState())
         
-        if let is1 = theText.LeftButton?.isSelectod , is2 = theText.RightButton?.isSelectod {
+        if let is1 = theText.LeftButton?.isSelectod , let is2 = theText.RightButton?.isSelectod {
             if is1 || is2 {
-                userInteractionEnabled = false
+                isUserInteractionEnabled = false
                 if is1 {
-                    leftButton?.selected = true
-                    rightButton?.enabled = false
+                    leftButton?.isSelected = true
+                    rightButton?.isEnabled = false
                 } else if is2 {
-                    rightButton?.selected = true
-                    leftButton?.enabled = false
+                    rightButton?.isSelected = true
+                    leftButton?.isEnabled = false
                 }
             }
         }

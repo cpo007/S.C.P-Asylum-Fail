@@ -12,11 +12,11 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBarHidden = true
+        navigationController?.isNavigationBarHidden = true
         view.backgroundColor = defultColor()
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 

@@ -15,14 +15,21 @@ class ArchivesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupResource()
-        let epDocumentView = EPDocumentBaseView(frame: view.frame, array: theArchivesArray)
-        view.addSubview(epDocumentView)
+//        let epDocumentView = EPDocumentBaseView(frame: view.frame, array: theArchivesArray)
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(ArchivesViewController.viewDidClick))
+//        epDocumentView.addGestureRecognizer(tap)
+//        view.addSubview(epDocumentView)
+    }
+    
+    func viewDidClick() {
+        let vc = ArchiveDetailViewController(CityName: "asdas")
+        present(vc, animated: true, completion: nil)
     }
     
  
     //初始化S.C.P档案
     func setupResource() {
-        guard let path = NSBundle.mainBundle().pathForResource("Archives", ofType: "plist") else { return }
+        guard let path = Bundle.main.path(forResource: "Archives", ofType: "plist") else { return }
         guard let arr = NSArray(contentsOfFile: path) as? [AnyObject] else { return }
         for dict in arr {
             guard let dict = dict as? [String:AnyObject] else { return }
@@ -34,11 +41,6 @@ class ArchivesViewController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        navigationController?.popViewControllerAnimated(true)
-        dismissViewControllerAnimated(true, completion: nil)
     }
 
 }

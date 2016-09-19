@@ -2,6 +2,5 @@
 platform :ios, '9.0'
 
 target 'S.C.P Asylum Fail' do
-    pod 'SnapKit'
   use_frameworks!
 end

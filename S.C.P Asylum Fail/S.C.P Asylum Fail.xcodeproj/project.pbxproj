@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3821A9DA1D77C8FC0071FD01 /* HomeNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3821A9D91D77C8FC0071FD01 /* HomeNotificationCell.swift */; };
 		3821AA1B1D797DA30071FD01 /* Archives.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3821AA1A1D797DA30071FD01 /* Archives.plist */; };
-		3821AA1D1D79818A0071FD01 /* EPDocumentBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3821AA1C1D79818A0071FD01 /* EPDocumentBaseView.swift */; };
 		3821AA201D7D4EE50071FD01 /* HomeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3821AA1F1D7D4EE50071FD01 /* HomeMenuView.swift */; };
 		3821AA221D7D514B0071FD01 /* HomeMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3821AA211D7D514B0071FD01 /* HomeMenuView.xib */; };
 		3821AA261D7D641B0071FD01 /* ArchivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3821AA251D7D641B0071FD01 /* ArchivesViewController.swift */; };
@@ -28,6 +27,7 @@
 		382A3C441D6AD88F0093B51A /* HomeDialogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C431D6AD88F0093B51A /* HomeDialogueTableViewCell.swift */; };
 		382A3C4B1D6AF3370093B51A /* NSTimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C4A1D6AF3370093B51A /* NSTimerExtension.swift */; };
 		38B402CE1D8134C9009959A5 /* HomeEndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */; };
+		38B402D01D8150D0009959A5 /* ArchiveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B402CF1D8150D0009959A5 /* ArchiveDetailViewController.swift */; };
 		38FC5DBD1D19457E00D115AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC5DBC1D19457E00D115AD /* AppDelegate.swift */; };
 		38FC5DC41D19457E00D115AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FC5DC31D19457E00D115AD /* Assets.xcassets */; };
 		38FC5DC71D19457E00D115AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FC5DC51D19457E00D115AD /* LaunchScreen.storyboard */; };
@@ -57,7 +57,6 @@
 		179568853C3009E576CBB9F6 /* Pods_S_C_P_Asylum_Fail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S_C_P_Asylum_Fail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3821A9D91D77C8FC0071FD01 /* HomeNotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNotificationCell.swift; sourceTree = "<group>"; };
 		3821AA1A1D797DA30071FD01 /* Archives.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Archives.plist; sourceTree = "<group>"; };
-		3821AA1C1D79818A0071FD01 /* EPDocumentBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPDocumentBaseView.swift; sourceTree = "<group>"; };
 		3821AA1F1D7D4EE50071FD01 /* HomeMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMenuView.swift; sourceTree = "<group>"; };
 		3821AA211D7D514B0071FD01 /* HomeMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeMenuView.xib; sourceTree = "<group>"; };
 		3821AA251D7D641B0071FD01 /* ArchivesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchivesViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		382A3C431D6AD88F0093B51A /* HomeDialogueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDialogueTableViewCell.swift; sourceTree = "<group>"; };
 		382A3C4A1D6AF3370093B51A /* NSTimerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerExtension.swift; sourceTree = "<group>"; };
 		38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEndTableViewCell.swift; sourceTree = "<group>"; };
+		38B402CF1D8150D0009959A5 /* ArchiveDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveDetailViewController.swift; sourceTree = "<group>"; };
 		38FC5DB91D19457E00D115AD /* S.C.P Asylum Fail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S.C.P Asylum Fail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FC5DBC1D19457E00D115AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38FC5DC31D19457E00D115AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,19 +145,13 @@
 			name = Archives;
 			sourceTree = "<group>";
 		};
-		3821AA1E1D79818D0071FD01 /* EPDocumentView */ = {
-			isa = PBXGroup;
-			children = (
-				3821AA1C1D79818A0071FD01 /* EPDocumentBaseView.swift */,
-			);
-			name = EPDocumentView;
-			sourceTree = "<group>";
-		};
 		3821AA241D7D63C70071FD01 /* Archives */ = {
 			isa = PBXGroup;
 			children = (
+				38B402D11D815101009959A5 /* View */,
 				3821AA271D7D69C20071FD01 /* Model */,
 				3821AA251D7D641B0071FD01 /* ArchivesViewController.swift */,
+				38B402CF1D8150D0009959A5 /* ArchiveDetailViewController.swift */,
 			);
 			name = Archives;
 			sourceTree = "<group>";
@@ -211,7 +205,6 @@
 		382A3C271D6420F30093B51A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				3821AA1E1D79818D0071FD01 /* EPDocumentView */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -271,6 +264,13 @@
 				382A3C4A1D6AF3370093B51A /* NSTimerExtension.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		38B402D11D815101009959A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		38FC5DB01D19457E00D115AD = {
@@ -410,18 +410,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = eggplant;
 				TargetAttributes = {
 					38FC5DB81D19457E00D115AD = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					38FC5DCC1D19457F00D115AD = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 38FC5DB81D19457E00D115AD;
 					};
 					38FC5DD71D19457F00D115AD = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 38FC5DB81D19457E00D115AD;
 					};
 				};
@@ -617,11 +620,11 @@
 				382A3C221D641FEE0093B51A /* BaseViewController.swift in Sources */,
 				3821AA261D7D641B0071FD01 /* ArchivesViewController.swift in Sources */,
 				382A3C441D6AD88F0093B51A /* HomeDialogueTableViewCell.swift in Sources */,
-				3821AA1D1D79818A0071FD01 /* EPDocumentBaseView.swift in Sources */,
 				382A3C341D64716C0093B51A /* HomeInstructionsTableViewCell.swift in Sources */,
 				382A3C401D6AA74E0093B51A /* BaseTableViewCell.swift in Sources */,
 				382A3C4B1D6AF3370093B51A /* NSTimerExtension.swift in Sources */,
 				382A3C3C1D6718780093B51A /* TheText.swift in Sources */,
+				38B402D01D8150D0009959A5 /* ArchiveDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,8 +685,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -727,8 +732,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -747,6 +754,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -755,12 +763,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8C592CF9A47F720FA262A2A /* Pods-S.C.P Asylum Fail.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "S.C.P Asylum Fail/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eggplant.S-C-P-Asylum-Fail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -769,12 +779,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 99AE1FE3226AD185D37C9087 /* Pods-S.C.P Asylum Fail.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "S.C.P Asylum Fail/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eggplant.S-C-P-Asylum-Fail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -787,6 +799,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eggplant.S-C-P-Asylum-FailTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/S.C.P Asylum Fail.app/S.C.P Asylum Fail";
 			};
 			name = Debug;
@@ -799,6 +812,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eggplant.S-C-P-Asylum-FailTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/S.C.P Asylum Fail.app/S.C.P Asylum Fail";
 			};
 			name = Release;
@@ -810,6 +824,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eggplant.S-C-P-Asylum-FailUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "S.C.P Asylum Fail";
 			};
 			name = Debug;
@@ -821,6 +836,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eggplant.S-C-P-Asylum-FailUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "S.C.P Asylum Fail";
 			};
 			name = Release;

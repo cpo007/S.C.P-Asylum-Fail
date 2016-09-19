@@ -10,15 +10,15 @@ import UIKit
 
 class HomeMenuView: UIView {
 
-    var buttonDidClickBlock:((tag:Int)->())?
+    var buttonDidClickBlock:((_ tag:Int)->())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
-    @IBAction func buttonDidClick(sender: UIButton) {
-        buttonDidClickBlock?(tag: sender.tag)
+    @IBAction func buttonDidClick(_ sender: UIButton) {
+        buttonDidClickBlock?(sender.tag)
     }
 
 }

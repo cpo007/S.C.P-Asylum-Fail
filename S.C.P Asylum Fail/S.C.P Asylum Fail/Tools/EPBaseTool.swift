@@ -9,11 +9,11 @@
 import UIKit
 
 
-let Width = UIScreen.mainScreen().bounds.width
-let Height = UIScreen.mainScreen().bounds.height
-let Bounds = UIScreen.mainScreen().bounds
+let Width = UIScreen.main.bounds.width
+let Height = UIScreen.main.bounds.height
+let Bounds = UIScreen.main.bounds
 
-func getLabel(text text:String, font:UIFont?, color:UIColor) -> UILabel{
+func getLabel(text:String, font:UIFont?, color:UIColor) -> UILabel{
     let label = UILabel()
     label.text = text
     if let font = font {
@@ -25,21 +25,21 @@ func getLabel(text text:String, font:UIFont?, color:UIColor) -> UILabel{
 }
 
 //创建一个普通按钮
-func getNormalButton(target:AnyObject,action:Selector,Title:String ,font:UIFont?,color:UIColor?,tag:NSInteger?) -> UIButton{
+func getNormalButton(_ target:AnyObject,action:Selector,Title:String ,font:UIFont? = nil,color:UIColor? = nil,tag:NSInteger? = nil) -> UIButton{
     let button = UIButton()
     button.adjustsImageWhenHighlighted = false
-    button.addTarget(target, action: action, forControlEvents: UIControlEvents.TouchUpInside)
-    button.setTitle(Title, forState: UIControlState.Normal)
-    button.setBackgroundImage(colorToImage(ColorYellow()), forState: .Normal)
-    button.setBackgroundImage(colorToImage(ColorBlack()), forState: .Highlighted)
-    button.setBackgroundImage(colorToImage(ColorBlue()), forState: .Selected)
+    button.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
+    button.setTitle(Title, for: UIControlState())
+    button.setBackgroundImage(colorToImage(ColorYellow()), for: UIControlState())
+    button.setBackgroundImage(colorToImage(ColorBlack()), for: .highlighted)
+    button.setBackgroundImage(colorToImage(ColorBlue()), for: .selected)
     if let f = font{
         button.titleLabel?.font = f
     }
     if let c = color {
-        button.setTitleColor(c, forState: UIControlState.Normal)
+        button.setTitleColor(c, for: UIControlState())
     } else {
-        button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.black, for: UIControlState())
     }
     if let t = tag {
         button.tag = t
@@ -48,49 +48,49 @@ func getNormalButton(target:AnyObject,action:Selector,Title:String ,font:UIFont?
 }
 
 //制作分支字符串
-func getBranchString(Branch:NSNumber) -> String{
+func getBranchString(_ Branch:NSInteger) -> String{
     return "Branch\(Branch)"
 }
 
 //本地通知
-func registerLocalNotification(alertTime:NSTimeInterval){
+func registerLocalNotification(_ alertTime:TimeInterval){
     print(alertTime)
     //本地通知激活时记录通知时长及通知激活时时间以供比对
-    NSUserDefaults.standardUserDefaults().setDouble(alertTime, forKey: "NotificationTime")
-    NSUserDefaults.standardUserDefaults().setDouble(NSDate().timeIntervalSince1970, forKey: "HistoryOfTime")
+    UserDefaults.standard.set(alertTime, forKey: "NotificationTime")
+    UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "HistoryOfTime")
     
     let localNotifacation = UILocalNotification()
-    let fireDate = NSDate(timeInterval: alertTime, sinceDate: NSDate())
+    let fireDate = Date(timeInterval: alertTime, since: Date())
     localNotifacation.fireDate = fireDate
-    localNotifacation.timeZone = NSTimeZone.defaultTimeZone()
+    localNotifacation.timeZone = TimeZone.current
     localNotifacation.soundName = UILocalNotificationDefaultSoundName
     localNotifacation.alertBody = "D-9587有事想告知您."
-    UIApplication.sharedApplication().scheduleLocalNotification(localNotifacation)
+    UIApplication.shared.scheduleLocalNotification(localNotifacation)
     
 }
 
 //获得沙盒路径
-func getSandBoxPath(fileName:String) -> String{
-    guard let SandBoxBasePath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first else {
+func getSandBoxPath(_ fileName:String) -> String{
+    guard let SandBoxBasePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {
         return ""
     }
-    let SandSavdBoxPath = SandBoxBasePath.stringByAppendingString("/\(fileName)")
+    let SandSavdBoxPath = SandBoxBasePath + "/\(fileName)"
     return SandSavdBoxPath
 }
 
 //保存数据
-func saveData(theStoryArry:[TheText], theTextArry:[TheText]){
+func saveData(_ theStoryArry:[TheText], theTextArry:[TheText]){
     let sandBoxSavePath = getSandBoxPath("data")
     let sandBoxMaxSavePath = getSandBoxPath("maxData")
     if sandBoxSavePath.isEmpty && sandBoxMaxSavePath.isEmpty {
         print("保存失败")
         return
     }
+    let data = NSKeyedArchiver.archivedData(withRootObject: theStoryArry)
+    let maxData = NSKeyedArchiver.archivedData(withRootObject: theTextArry)
+    try? data.write(to: URL(fileURLWithPath: sandBoxSavePath), options: [.atomic])
+    try? maxData.write(to: URL(fileURLWithPath: sandBoxMaxSavePath), options: [.atomic])
     print("保存成功")
-    let data = NSKeyedArchiver.archivedDataWithRootObject(theStoryArry)
-    let maxData = NSKeyedArchiver.archivedDataWithRootObject(theTextArry)
-    data.writeToFile(sandBoxSavePath, atomically: true)
-    maxData.writeToFile(sandBoxMaxSavePath, atomically: true)
 }
 
 //读取数据
@@ -100,25 +100,25 @@ func reloadData() -> (theStoryArry:[TheText]?, theTextArry:[TheText]?) {
     if sandBoxSavePath.isEmpty && sandBoxMaxSavePath.isEmpty {
         print("读取失败")
     }
-    print("读取成功")
-    let data = try?NSData(contentsOfFile: sandBoxSavePath, options: .DataReadingMapped)
-    let maxData = try?NSData(contentsOfFile: sandBoxMaxSavePath, options: .DataReadingMapped)
-    guard let d = data, m = maxData else {
+    let data = try?Data(contentsOf: URL(fileURLWithPath: sandBoxSavePath), options: .dataReadingMapped)
+    let maxData = try?Data(contentsOf: URL(fileURLWithPath: sandBoxMaxSavePath), options: .dataReadingMapped)
+    guard let d = data, let m = maxData else {
         return (nil,nil)
     }
-    let theStoryArry = NSKeyedUnarchiver.unarchiveObjectWithData(d) as? [TheText]
-    let theTextArry = NSKeyedUnarchiver.unarchiveObjectWithData(m) as? [TheText]
+    let theStoryArry = NSKeyedUnarchiver.unarchiveObject(with: d) as? [TheText]
+    let theTextArry = NSKeyedUnarchiver.unarchiveObject(with: m) as? [TheText]
+    print("读取成功")
     return (theStoryArry,theTextArry)
 }
 
 //颜色便利构造
-func RGB(red red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+func RGB(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
     return UIColor(red: red / 255, green: green / 255 , blue: blue / 255, alpha: 1)
 }
 
 //  随机颜色
 func RandomColor() -> UIColor {
-    return RGB(red: CGFloat(random() % 256), green: CGFloat(random() % 256), blue: CGFloat(random() % 256))
+    return RGB(red: CGFloat(arc4random() % 256), green: CGFloat(arc4random() % 256), blue: CGFloat(arc4random() % 256))
 }
 
 //APP默认颜色
@@ -146,13 +146,13 @@ func ColorBlack () -> UIColor{
 }
 
 //颜色转图片（暂用）
-func colorToImage(color:UIColor) -> UIImage{
+func colorToImage(_ color:UIColor) -> UIImage{
     let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
     UIGraphicsBeginImageContext(rect.size)
     let context = UIGraphicsGetCurrentContext()
-    CGContextSetFillColorWithColor(context, color.CGColor)
-    CGContextFillRect(context, rect)
+    context?.setFillColor(color.cgColor)
+    context?.fill(rect)
     let image = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
-    return image
+    return image!
 }

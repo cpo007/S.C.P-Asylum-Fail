@@ -3,7 +3,7 @@ import Foundation
 private class NSTimerActor {
     var block: () -> ()
 
-    init(_ block: () -> ()) {
+    init(_ block: @escaping () -> ()) {
         self.block = block
     }
 
@@ -12,10 +12,10 @@ private class NSTimerActor {
     }
 }
 
-extension NSTimer {
+extension Timer {
 
-    public class func scheduled(ti: NSTimeInterval, userInfo: AnyObject? = nil, repeats: Bool = false, _ block: () -> Void) {
-        NSTimer.scheduledTimerWithTimeInterval(ti, target: NSTimerActor(block), selector: #selector(NSTimerActor.callback), userInfo: userInfo, repeats: repeats)
+    public class func scheduled(_ ti: TimeInterval, userInfo: AnyObject? = nil, repeats: Bool = false, _ block: @escaping () -> Void) {
+        Timer.scheduledTimer(timeInterval: ti, target: NSTimerActor(block), selector: #selector(NSTimerActor.callback), userInfo: userInfo, repeats: repeats)
     }
 
 }
