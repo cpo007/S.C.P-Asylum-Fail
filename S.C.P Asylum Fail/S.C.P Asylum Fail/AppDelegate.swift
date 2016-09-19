@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: Bounds)
-        
         window?.rootViewController = BaseNavigationController(rootViewController: HomeViewController())
         window?.makeKeyAndVisible()
         getNotificationSettings()

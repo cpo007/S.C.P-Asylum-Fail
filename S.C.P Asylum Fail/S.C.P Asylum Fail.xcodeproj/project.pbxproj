@@ -31,6 +31,7 @@
 		38B402CE1D8134C9009959A5 /* HomeEndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */; };
 		38B402D01D8150D0009959A5 /* ArchiveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B402CF1D8150D0009959A5 /* ArchiveDetailViewController.swift */; };
 		38F286AD1D8FD01600A44478 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F286AC1D8FD01600A44478 /* BaseButton.swift */; };
+		38F286AF1D90224800A44478 /* ArchiveDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F286AE1D90224800A44478 /* ArchiveDetailView.xib */; };
 		38FC5DBD1D19457E00D115AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC5DBC1D19457E00D115AD /* AppDelegate.swift */; };
 		38FC5DC41D19457E00D115AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FC5DC31D19457E00D115AD /* Assets.xcassets */; };
 		38FC5DC71D19457E00D115AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FC5DC51D19457E00D115AD /* LaunchScreen.storyboard */; };
@@ -63,6 +64,7 @@
 		38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEndTableViewCell.swift; sourceTree = "<group>"; };
 		38B402CF1D8150D0009959A5 /* ArchiveDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveDetailViewController.swift; sourceTree = "<group>"; };
 		38F286AC1D8FD01600A44478 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		38F286AE1D90224800A44478 /* ArchiveDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArchiveDetailView.xib; sourceTree = "<group>"; };
 		38FC5DB91D19457E00D115AD /* S.C.P Asylum Fail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S.C.P Asylum Fail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FC5DBC1D19457E00D115AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38FC5DC31D19457E00D115AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		38B402D11D815101009959A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38F286AE1D90224800A44478 /* ArchiveDetailView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				3821AA221D7D514B0071FD01 /* HomeMenuView.xib in Resources */,
 				382A3C391D66F50F0093B51A /* Prologue.plist in Resources */,
 				3821AA2B1D7D99BC0071FD01 /* BadEnd.plist in Resources */,
+				38F286AF1D90224800A44478 /* ArchiveDetailView.xib in Resources */,
 				3821AA1B1D797DA30071FD01 /* Archives.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

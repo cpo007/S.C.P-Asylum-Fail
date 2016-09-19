@@ -83,7 +83,8 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
                 self?.updateMenuView()
                 break
             case 202:
-                self?.present(ArchivesViewController(), animated: true, completion: nil)
+                self?.navigationController?.pushViewController(ArchivesViewController(), animated: true)
+//                self?.present(ArchivesViewController(), animated: true, completion: nil)
                 break
             default :
                 break

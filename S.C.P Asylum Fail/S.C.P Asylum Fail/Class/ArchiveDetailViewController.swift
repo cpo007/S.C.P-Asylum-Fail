@@ -13,7 +13,6 @@ class ArchiveDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
         //菜单选项
 //        let detailView = NSBundle.mainBundle().loadNibNamed("ArchiveDetailView", owner: nil, options: nil).first as? UIView
 //        print(detailView)
