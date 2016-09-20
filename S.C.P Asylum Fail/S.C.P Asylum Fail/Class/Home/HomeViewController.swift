@@ -86,9 +86,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
                 self?.navigationController?.pushViewController(ArchivesViewController(), animated: true)
                 break
             case HomeMenuButtonStyle.gotoWorldLine.rawValue :
-                break
-            case HomeMenuButtonStyle.quickMode.rawValue :
-                
+                self?.navigationController?.pushViewController(StoryLineViewController(), animated: true)
                 break
             case HomeMenuButtonStyle.getScore.rawValue :
                 break
@@ -125,7 +123,6 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         } else if theText.CellStyle == HomeCellStyle.notification && !isQuick {
             //快速模式中继续故事，非快速模式下激活通知并暂停故事
             timerStop()
-            
         }
         saveData(theStoryArray, theTextArry: theTextArray)
     }
