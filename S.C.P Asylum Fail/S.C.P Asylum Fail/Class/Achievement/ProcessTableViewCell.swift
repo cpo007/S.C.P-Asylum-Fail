@@ -8,27 +8,65 @@
 
 import UIKit
 
-class ProcessTableViewCell: UITableViewCell {
+class ProcessTableViewCell: BaseTableViewCell {
     
     @IBOutlet weak var leftConnectLine: UIView!
     @IBOutlet weak var rightConnectLine: UIView!
     @IBOutlet weak var leftLine: UIView!
     @IBOutlet weak var centerLine: UIView!
     @IBOutlet weak var rightLine: UIView!
+    @IBOutlet weak var leftLine2: UIView!
+    @IBOutlet weak var rightLine2: UIView!
+    
     @IBOutlet weak var leftProcessButton: UIButton!
     @IBOutlet weak var centerProcessButton: UIButton!
     @IBOutlet weak var rightProcessButton: UIButton!
     
+    @IBOutlet weak var leftLineTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var rightLineTopConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    override func updateResourece(theStoryLine: TheStoryLine) {
+        super.updateResourece(theStoryLine: theStoryLine)
+        
+        if theStoryLine.CenterNode == nil {
+            centerProcessButton.isHidden = true
+        }
+        if theStoryLine.LeftNode == nil {
+            leftProcessButton.isHidden = true
+            leftLine.isHidden = true
+            leftLine2.isHidden = true
+            leftConnectLine.isHidden = true
+        }
+        if theStoryLine.RightNode == nil {
+            rightProcessButton.isHidden = true
+            rightLine.isHidden = true
+            rightLine2.isHidden = true
+            rightConnectLine.isHidden = true
+        }
+        
+        if let leftNode = theStoryLine.LeftNode {
+            if leftNode.IsEnd {
+                leftLine2.isHidden = true
+                leftConnectLine.isHidden = true
+                leftLineTopConstraint.constant = 0
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+            }
+        }
+        
+        if let rightNode = theStoryLine.RightNode {
+            if rightNode.IsEnd {
+                rightLine2.isHidden = true
+                rightConnectLine.isHidden = true
+                rightLineTopConstraint.constant = 0
+            }
+        }
+        
+        
     }
     
 }

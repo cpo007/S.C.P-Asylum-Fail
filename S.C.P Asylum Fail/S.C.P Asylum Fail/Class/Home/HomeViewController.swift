@@ -23,6 +23,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     var menuView:HomeMenuView?
     var theTextArray = [TheText]()
     var theStoryArray = [TheText]()
+    var theStoryLineArray = [TheStoryLine]()
     var storyCount = 0
     var hasLoad = false
     var isPop = false
@@ -41,6 +42,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         super.viewDidLoad()
         setupUI()
         setupResource()
+        setupTheStoryLine()
         compareNotificationTime()
     }
     
@@ -78,6 +80,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
             menuView?.backgroundColor = ColorPurple()
         
         menuView?.buttonDidClickBlock = { [weak self] tag in
+            guard let weakself = self else { return }
             switch tag {
             case HomeMenuButtonStyle.dismiss.rawValue :
                 self?.updateMenuView()
@@ -86,7 +89,8 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
                 self?.navigationController?.pushViewController(ArchivesViewController(), animated: true)
                 break
             case HomeMenuButtonStyle.gotoWorldLine.rawValue :
-                self?.navigationController?.pushViewController(StoryLineViewController(), animated: true)
+                let vc = StoryLineViewController(theStoryLineArray: weakself.theStoryLineArray)
+                self?.navigationController?.pushViewController(vc, animated: true)
                 break
             case HomeMenuButtonStyle.getScore.rawValue :
                 break
@@ -127,6 +131,15 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         saveData(theStoryArray, theTextArry: theTextArray)
     }
     
+    //初始化故事线数据,若初次初始化则读取plist文件，否则读取存档
+    func setupTheStoryLine() {
+        guard let path = Bundle.main.path(forResource: "StoryLine", ofType: "plist") else { return }
+        guard let array = NSArray(contentsOfFile: path) as? [[String:AnyObject]] else { return }
+        for dic in array{
+            let theStoryLine = TheStoryLine(dict: dic)
+            theStoryLineArray.append(theStoryLine)
+        }
+    }
     
     //初始化数据，若有存档则读取存档，否则读取序章
     func setupResource() {

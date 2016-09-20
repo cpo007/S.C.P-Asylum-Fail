@@ -11,17 +11,19 @@ import UIKit
 class StoryLineViewController: BaseViewController {
     
     var tableView:HomeTableView?
-    var theStoryLineArray = [AnyObject]()
+    var theStoryLineArray = [TheStoryLine]()
     
     let startIdentifier = "startIdentifier"
     let processIdentifier = "processIdentifier"
-    let endIdentifier = "endIdentifier"
 
+    convenience init(theStoryLineArray:[TheStoryLine]) {
+        self.init()
+        self.theStoryLineArray = theStoryLineArray
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setupResource()
 
     }
 
@@ -41,26 +43,7 @@ class StoryLineViewController: BaseViewController {
         
         tableView?.register(UINib(nibName: "StartTableViewCell", bundle: nil), forCellReuseIdentifier: startIdentifier)
         tableView?.register(UINib(nibName: "ProcessTableViewCell", bundle: nil), forCellReuseIdentifier: processIdentifier)
-        tableView?.register(UINib(nibName: "EndTableViewCell", bundle: nil), forCellReuseIdentifier: endIdentifier)
         
-    }
-    
-    //初始化数据，数据为固定值，若用户从未使用过则从plist读取并且存档，之后的改动都从存档中更改
-    func setupResource() {
-//        if let theStoryArry = reloadData().theStoryArry, let theTextArray = reloadData().theTextArry {
-//            self.theStoryArray = theStoryArry
-//            self.theTextArray = theTextArray
-//            storyCount = theStoryArry.count
-//        } else {
-//            guard let path = Bundle.main.path(forResource: "Prologue", ofType: "plist") else { return }
-//            guard let dict = NSDictionary(contentsOfFile: path) as? [String:[AnyObject]] else { return }
-//            guard let arr = dict["Branch101"] as? [[String:AnyObject]] else { return }
-//            for dic in arr{
-//                let theText = TheText(dict: dic)
-//                theTextArray.append(theText)
-//            }
-//        }
-//        
     }
 
 }
@@ -70,18 +53,19 @@ extension StoryLineViewController: UITableViewDataSource,UITableViewDelegate {
     //tableViewDelegate And DataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return theStoryLineArray.count
     }
     
     @objc(tableView:cellForRowAtIndexPath:) func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        let theStorLine = theStoryLineArray[indexPath.row]
+        print(theStorLine.Style)
+        if theStorLine.Style == 101 {
             let cell = tableView.dequeueReusableCell(withIdentifier: startIdentifier) as? StartTableViewCell
-            return cell!
-        } else if indexPath.row == 9 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: endIdentifier) as? EndTableViewCell
+            cell?.updateResourece(theStoryLine: theStorLine)
             return cell!
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: processIdentifier) as? ProcessTableViewCell
+            cell?.updateResourece(theStoryLine: theStorLine)
             return cell!
         }
 

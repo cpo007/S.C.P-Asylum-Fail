@@ -8,17 +8,25 @@
 
 import UIKit
 
-class StartTableViewCell: UITableViewCell {
-
+class StartTableViewCell: BaseTableViewCell {
+    
+    @IBOutlet weak var upLine: UIView!
+    @IBOutlet weak var downLine: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    override func updateResourece(theStoryLine: TheStoryLine) {
+        super.updateResourece(theStoryLine: theStoryLine)
+        if let centerNode = theStoryLine.CenterNode {
+            if centerNode.IsEnd {
+                downLine.isHidden = true
+            } else {
+                upLine.isHidden = true
+            }
+        }
     }
     
 }
