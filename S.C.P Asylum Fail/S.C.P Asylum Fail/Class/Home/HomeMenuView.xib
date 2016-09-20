@@ -15,31 +15,40 @@
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bKa-4T-EHg">
                             <subviews>
-                                <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgo-Zp-Aor">
+                                <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgo-Zp-Aor">
                                     <state key="normal" title="S.C.P 档案"/>
                                     <connections>
                                         <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="yKF-oE-lzE"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUv-iw-HWT">
-                                    <state key="normal" title="Button"/>
+                                <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUv-iw-HWT">
+                                    <state key="normal" title="快速模式"/>
+                                    <connections>
+                                        <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="FtY-QM-Q7S"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cB-WN-nLu">
-                                    <state key="normal" title="Button"/>
+                                    <state key="normal" title="关闭音乐"/>
                                 </button>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-UL-wub">
                             <frame key="frameInset" minX="133" minY="10" width="87" height="178"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-0H-Zax">
-                                    <state key="normal" title="Button"/>
+                                <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-0H-Zax">
+                                    <state key="normal" title="世界线"/>
+                                    <connections>
+                                        <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="2BM-Y7-asf"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLz-ey-uci">
-                                    <state key="normal" title="Button"/>
+                                <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLz-ey-uci">
+                                    <state key="normal" title="给游戏打分"/>
+                                    <connections>
+                                        <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="L4N-JA-2lp"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-lt-gz8">
-                                    <state key="normal" title="Button"/>
+                                    <state key="normal" title="关闭音效"/>
                                 </button>
                             </subviews>
                         </stackView>
@@ -66,7 +75,7 @@
                         <constraint firstAttribute="trailing" secondItem="EDs-UL-wub" secondAttribute="trailing" constant="15" id="zfd-1T-c8A"/>
                     </constraints>
                 </view>
-                <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmJ-2x-QTO">
+                <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmJ-2x-QTO">
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="1G7-oh-Xw8"/>
                     </constraints>
@@ -86,6 +95,11 @@
                 <constraint firstAttribute="bottom" secondItem="GAT-zL-v5o" secondAttribute="bottom" id="qcP-wX-CYP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="musicButton" destination="3cB-WN-nLu" id="13j-ia-ene"/>
+                <outlet property="quickModeButton" destination="TUv-iw-HWT" id="gDS-ad-Cnp"/>
+                <outlet property="soundButton" destination="bIF-lt-gz8" id="Wsg-KK-UTU"/>
+            </connections>
             <point key="canvasLocation" x="-9" y="-125"/>
         </view>
     </objects>

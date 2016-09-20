@@ -79,12 +79,18 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         
         menuView?.buttonDidClickBlock = { [weak self] tag in
             switch tag {
-            case 201 :
+            case HomeMenuButtonStyle.dismiss.rawValue :
                 self?.updateMenuView()
                 break
-            case 202:
+            case HomeMenuButtonStyle.gotoArchives.rawValue :
                 self?.navigationController?.pushViewController(ArchivesViewController(), animated: true)
-//                self?.present(ArchivesViewController(), animated: true, completion: nil)
+                break
+            case HomeMenuButtonStyle.gotoWorldLine.rawValue :
+                break
+            case HomeMenuButtonStyle.quickMode.rawValue :
+                
+                break
+            case HomeMenuButtonStyle.getScore.rawValue :
                 break
             default :
                 break
@@ -93,7 +99,6 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     }
     
     func updateMenuView() {
-    
         
         menuView?.snp.updateConstraints({ (make) in
             make.top.equalTo(view.snp.bottom).offset(isPop ? -50 : -(Height / 3))
@@ -106,6 +111,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     }
     
     func getStory() {
+        
         if theTextArray.count == 0 { return }
         let theText = theTextArray[storyCount]
         theStoryArray.append(theText)
@@ -113,8 +119,13 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         tableView?.insertRows(at: [IndexPath(row: theStoryArray.count-1, section: 0)], with: UITableViewRowAnimation.bottom)
         tableView?.endUpdates()
         storyCount += 1
-        if theText.CellStyle == HomeCellStyle.notification || theText.CellStyle == HomeCellStyle.twoButton || theText.CellStyle == HomeCellStyle.end {
+        let isQuick = UserDefaults.standard.bool(forKey: "isQuick")
+        if  theText.CellStyle == HomeCellStyle.twoButton || theText.CellStyle == HomeCellStyle.end {
             timerStop()
+        } else if theText.CellStyle == HomeCellStyle.notification && !isQuick {
+            //快速模式中继续故事，非快速模式下激活通知并暂停故事
+            timerStop()
+            
         }
         saveData(theStoryArray, theTextArry: theTextArray)
     }

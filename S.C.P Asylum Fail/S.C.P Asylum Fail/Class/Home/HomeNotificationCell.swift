@@ -32,7 +32,8 @@ class HomeNotificationCell: BaseTableViewCell {
     override func updateResource(_ theText: TheText) {
         super.updateResource(theText)
         textLbl?.text = theText.Text
-        if theText.NotificationTime.intValue > 0 {
+        let isQuick = UserDefaults.standard.bool(forKey: "isQuick")
+        if theText.NotificationTime.intValue > 0 && isQuick {
             registerLocalNotification(theText.NotificationTime.doubleValue)
         }
     }
