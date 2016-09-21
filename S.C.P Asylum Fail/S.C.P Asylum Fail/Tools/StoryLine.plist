@@ -7,6 +7,8 @@
 		<integer>101</integer>
 		<key>CenterNode</key>
 		<dict>
+			<key>icon</key>
+			<string></string>
 			<key>IsEnd</key>
 			<false/>
 			<key>HasActivate</key>
@@ -22,6 +24,8 @@
 		<integer>102</integer>
 		<key>LeftNode</key>
 		<dict>
+			<key>Icon</key>
+			<string></string>
 			<key>HasActivate</key>
 			<false/>
 			<key>IsEnd</key>
@@ -30,11 +34,21 @@
 			<string>Prologue</string>
 			<key>Branch</key>
 			<string>101</string>
+			<key>Title</key>
+			<string>序章</string>
+			<key>Detail</key>
+			<string>D-9587“有幸”被选中执行SCP-173例行清理工作，可怜的家伙。</string>
 		</dict>
 		<key>CenterNode</key>
 		<dict>
 			<key>HasActivate</key>
 			<false/>
+			<key>Icon</key>
+			<string></string>
+			<key>Title</key>
+			<string>序章</string>
+			<key>Detail</key>
+			<string>D-9587“有幸”被选中执行SCP-173例行清理工作，可怜的家伙。</string>
 			<key>IsEnd</key>
 			<false/>
 			<key>Plist</key>
@@ -67,6 +81,10 @@
 			<string>Prologue</string>
 			<key>Branch</key>
 			<string>101</string>
+			<key>Title</key>
+			<string>序章</string>
+			<key>Detail</key>
+			<string>D-9587“有幸”被选中执行SCP-173例行清理工作，骂骂咧咧的他万万没想到这是一系列噩梦的开端。</string>
 		</dict>
 	</dict>
 	<dict>

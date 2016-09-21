@@ -26,6 +26,8 @@
 		382A3C401D6AA74E0093B51A /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C3F1D6AA74E0093B51A /* BaseTableViewCell.swift */; };
 		382A3C441D6AD88F0093B51A /* HomeDialogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C431D6AD88F0093B51A /* HomeDialogueTableViewCell.swift */; };
 		382A3C4B1D6AF3370093B51A /* NSTimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A3C4A1D6AF3370093B51A /* NSTimerExtension.swift */; };
+		3832CE1B1D9257B800B3D79D /* StoryLineDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3832CE1A1D9257B800B3D79D /* StoryLineDetailsView.xib */; };
+		3832CE1D1D9257CF00B3D79D /* StoryLineDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832CE1C1D9257CF00B3D79D /* StoryLineDetailsView.swift */; };
 		387D05131D8FC5BC006870F8 /* HomeEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D05121D8FC5BC006870F8 /* HomeEndView.swift */; };
 		387D05151D8FC5C8006870F8 /* HomeEndView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387D05141D8FC5C8006870F8 /* HomeEndView.xib */; };
 		38B402CE1D8134C9009959A5 /* HomeEndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */; };
@@ -66,6 +68,8 @@
 		382A3C3F1D6AA74E0093B51A /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		382A3C431D6AD88F0093B51A /* HomeDialogueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDialogueTableViewCell.swift; sourceTree = "<group>"; };
 		382A3C4A1D6AF3370093B51A /* NSTimerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerExtension.swift; sourceTree = "<group>"; };
+		3832CE1A1D9257B800B3D79D /* StoryLineDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryLineDetailsView.xib; sourceTree = "<group>"; };
+		3832CE1C1D9257CF00B3D79D /* StoryLineDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryLineDetailsView.swift; sourceTree = "<group>"; };
 		387D05121D8FC5BC006870F8 /* HomeEndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEndView.swift; sourceTree = "<group>"; };
 		387D05141D8FC5C8006870F8 /* HomeEndView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeEndView.xib; sourceTree = "<group>"; };
 		38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEndTableViewCell.swift; sourceTree = "<group>"; };
@@ -272,6 +276,8 @@
 				38F286B81D9118C700A44478 /* StartTableViewCell.xib */,
 				38F286BF1D9118E200A44478 /* ProcessTableViewCell.swift */,
 				38F286C01D9118E200A44478 /* ProcessTableViewCell.xib */,
+				3832CE1C1D9257CF00B3D79D /* StoryLineDetailsView.swift */,
+				3832CE1A1D9257B800B3D79D /* StoryLineDetailsView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 				3821AA221D7D514B0071FD01 /* HomeMenuView.xib in Resources */,
 				382A3C391D66F50F0093B51A /* Prologue.plist in Resources */,
 				38F286C21D9118E200A44478 /* ProcessTableViewCell.xib in Resources */,
+				3832CE1B1D9257B800B3D79D /* StoryLineDetailsView.xib in Resources */,
 				3821AA2B1D7D99BC0071FD01 /* BadEnd.plist in Resources */,
 				38F286AF1D90224800A44478 /* ArchiveDetailView.xib in Resources */,
 				38F286BA1D9118C700A44478 /* StartTableViewCell.xib in Resources */,
@@ -468,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				382A3C361D64717A0093B51A /* HomeButtonTableViewCell.swift in Sources */,
+				3832CE1D1D9257CF00B3D79D /* StoryLineDetailsView.swift in Sources */,
 				387D05131D8FC5BC006870F8 /* HomeEndView.swift in Sources */,
 				38F286C41D9133C700A44478 /* TheStoryLine.swift in Sources */,
 				382A3C321D6423310093B51A /* HomeTableView.swift in Sources */,

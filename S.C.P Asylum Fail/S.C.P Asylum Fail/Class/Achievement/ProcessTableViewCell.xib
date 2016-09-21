@@ -64,6 +64,9 @@
                         </constraints>
                         <state key="normal" image="orangeBackgroundColor"/>
                         <state key="selected" image="purpleBackgroundColor"/>
+                        <connections>
+                            <action selector="centerButtonDidClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IPe-Om-fy2"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOd-rN-mtr">
                         <constraints>
@@ -72,6 +75,9 @@
                         </constraints>
                         <state key="normal" image="orangeBackgroundColor"/>
                         <state key="selected" image="purpleBackgroundColor"/>
+                        <connections>
+                            <action selector="leftButtonDidClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9Um-Q6-TLb"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBe-CY-SiS">
                         <constraints>
@@ -80,6 +86,9 @@
                         </constraints>
                         <state key="normal" image="orangeBackgroundColor"/>
                         <state key="selected" image="purpleBackgroundColor"/>
+                        <connections>
+                            <action selector="rightButtonDidClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zNo-un-dyi"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

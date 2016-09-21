@@ -91,6 +91,9 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
             case HomeMenuButtonStyle.gotoWorldLine.rawValue :
                 let vc = StoryLineViewController(theStoryLineArray: weakself.theStoryLineArray)
                 self?.navigationController?.pushViewController(vc, animated: true)
+                vc.reloadStory = { [weak self] node in
+                    self?.setupResource(node: node)
+                }
                 break
             case HomeMenuButtonStyle.getScore.rawValue :
                 break
@@ -142,7 +145,23 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     }
     
     //初始化数据，若有存档则读取存档，否则读取序章
-    func setupResource() {
+    func setupResource(node: TheStoryNode? = nil) {
+        if let node = node {
+            theStoryArray.removeAll()
+            theTextArray.removeAll()
+            storyCount = 0
+            tableView?.reloadData()
+            updateMenuView()
+            guard let path = Bundle.main.path(forResource: node.Plist, ofType: "plist") else { return }
+            guard let dict = NSDictionary(contentsOfFile: path) as? [String:[AnyObject]] else { return }
+            guard let arr = dict["Branch\(node.Branch)"] as? [[String:AnyObject]] else { return }
+            for dic in arr{
+                let theText = TheText(dict: dic)
+                theTextArray.append(theText)
+            }
+            timerStart()
+            return
+        }
         if let theStoryArry = reloadData().theStoryArry, let theTextArray = reloadData().theTextArry {
             self.theStoryArray = theStoryArry
             self.theTextArray = theTextArray

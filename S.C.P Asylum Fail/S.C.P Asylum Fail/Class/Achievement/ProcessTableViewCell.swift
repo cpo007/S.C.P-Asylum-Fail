@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ProcessTableViewCell: BaseTableViewCell {
     
@@ -24,6 +25,8 @@ class ProcessTableViewCell: BaseTableViewCell {
     
     @IBOutlet weak var leftLineTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var rightLineTopConstraint: NSLayoutConstraint!
+    
+    var nodeDidClick:((TheStoryNode)->())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -54,19 +57,54 @@ class ProcessTableViewCell: BaseTableViewCell {
                 leftLine2.isHidden = true
                 leftConnectLine.isHidden = true
                 leftLineTopConstraint.constant = 0
-
+            }
+            if !leftNode.HasActivate {
+                setupKeepOutView(button: leftProcessButton)
             }
         }
-        
         if let rightNode = theStoryLine.RightNode {
             if rightNode.IsEnd {
                 rightLine2.isHidden = true
                 rightConnectLine.isHidden = true
                 rightLineTopConstraint.constant = 0
             }
+            if !rightNode.HasActivate {
+                setupKeepOutView(button: rightProcessButton)
+            }
+            
         }
         
+        if let centerNode = theStoryLine.CenterNode {
+            if !centerNode.HasActivate {
+                setupKeepOutView(button: centerProcessButton)
+            }
+        }
+
         
     }
     
+    func setupKeepOutView(button:UIButton) {
+//        let view = UIView()
+//        view.backgroundColor = defultColor()
+//        addSubview(view)
+//        view.snp.makeConstraints { (make) in
+//            make.size.equalTo(CGSize(width: 55, height: 55))
+//            make.center.equalTo(button)
+//        }
+    }
+    
+    @IBAction func centerButtonDidClick(_ sender: AnyObject) {
+        nodeDidClick?(theStoryLine!.CenterNode!)
+    }
+    
+   
+    @IBAction func rightButtonDidClick(_ sender: AnyObject) {
+        nodeDidClick?(theStoryLine!.RightNode!)
+
+    }
+   
+    @IBAction func leftButtonDidClick(_ sender: AnyObject) {
+        nodeDidClick?(theStoryLine!.LeftNode!)
+    }
+
 }

@@ -55,6 +55,11 @@ class TheStoryNode: NSObject {
     var IsEnd = false
     var Plist = "Prologue"
     var Branch = 101
+    var Icon = ""
+    var Title = ""
+    var Detail = ""
+    
+    
     
     init(dict:[String:AnyObject]) {
         super.init()

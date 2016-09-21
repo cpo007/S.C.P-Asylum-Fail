@@ -23,8 +23,10 @@ class StartTableViewCell: BaseTableViewCell {
         if let centerNode = theStoryLine.CenterNode {
             if centerNode.IsEnd {
                 downLine.isHidden = true
+                upLine.isHidden = false
             } else {
                 upLine.isHidden = true
+                downLine.isHidden = false
             }
         }
     }
