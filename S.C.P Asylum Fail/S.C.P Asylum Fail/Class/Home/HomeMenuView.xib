@@ -8,91 +8,101 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeMenuView" customModule="S_C_P_Asylum_Fail" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="248" height="248"/>
+            <rect key="frame" x="0.0" y="0.0" width="260" height="240"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAT-zL-v5o">
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bKa-4T-EHg">
-                            <subviews>
-                                <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgo-Zp-Aor">
-                                    <state key="normal" title="S.C.P 档案"/>
-                                    <connections>
-                                        <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="yKF-oE-lzE"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUv-iw-HWT">
-                                    <state key="normal" title="快速模式"/>
-                                    <connections>
-                                        <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="FtY-QM-Q7S"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cB-WN-nLu">
-                                    <state key="normal" title="关闭音乐"/>
-                                </button>
-                            </subviews>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-UL-wub">
-                            <frame key="frameInset" minX="133" minY="10" width="87" height="178"/>
-                            <subviews>
-                                <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-0H-Zax">
-                                    <state key="normal" title="世界线"/>
-                                    <connections>
-                                        <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="2BM-Y7-asf"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLz-ey-uci">
-                                    <state key="normal" title="给游戏打分"/>
-                                    <connections>
-                                        <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="L4N-JA-2lp"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-lt-gz8">
-                                    <state key="normal" title="关闭音效"/>
-                                </button>
-                            </subviews>
-                        </stackView>
-                        <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Otx-Vs-MXC">
-                            <frame key="frameInset" minX="121" width="1" height="211"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="1" id="5dc-0K-VbC"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuBackground" translatesAutoresizingMaskIntoConstraints="NO" id="bBs-rU-DZS"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Otx-Vs-MXC">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="Otx-Vs-MXC" firstAttribute="leading" secondItem="bKa-4T-EHg" secondAttribute="trailing" constant="10" id="0re-h0-uf6"/>
-                        <constraint firstItem="Otx-Vs-MXC" firstAttribute="top" secondItem="GAT-zL-v5o" secondAttribute="top" id="6xc-ZE-a3O"/>
-                        <constraint firstItem="EDs-UL-wub" firstAttribute="leading" secondItem="Otx-Vs-MXC" secondAttribute="trailing" constant="10" id="BdF-9M-um9"/>
-                        <constraint firstAttribute="bottom" secondItem="bKa-4T-EHg" secondAttribute="bottom" constant="10" id="Vo3-Jz-0Vh"/>
-                        <constraint firstItem="bKa-4T-EHg" firstAttribute="leading" secondItem="GAT-zL-v5o" secondAttribute="leading" constant="15" id="aNg-1A-uI2"/>
-                        <constraint firstItem="Otx-Vs-MXC" firstAttribute="centerX" secondItem="GAT-zL-v5o" secondAttribute="centerX" id="bNv-3s-qFd"/>
-                        <constraint firstAttribute="bottom" secondItem="EDs-UL-wub" secondAttribute="bottom" constant="10" id="cNm-ww-kry"/>
-                        <constraint firstItem="EDs-UL-wub" firstAttribute="top" secondItem="GAT-zL-v5o" secondAttribute="top" constant="10" id="s39-mF-UZs"/>
-                        <constraint firstAttribute="bottom" secondItem="Otx-Vs-MXC" secondAttribute="bottom" id="vJg-Jj-YQS"/>
-                        <constraint firstItem="bKa-4T-EHg" firstAttribute="top" secondItem="GAT-zL-v5o" secondAttribute="top" constant="10" id="zDy-ri-BaJ"/>
-                        <constraint firstAttribute="trailing" secondItem="EDs-UL-wub" secondAttribute="trailing" constant="15" id="zfd-1T-c8A"/>
+                        <constraint firstAttribute="width" constant="1" id="Jkn-jA-94f"/>
                     </constraints>
                 </view>
                 <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmJ-2x-QTO">
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="1G7-oh-Xw8"/>
+                        <constraint firstAttribute="width" constant="50" id="NCi-LV-gjy"/>
+                        <constraint firstAttribute="height" constant="24" id="vWB-kD-ekF"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" backgroundImage="MenuTopButton"/>
                     <connections>
                         <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="UBM-CM-WoY"/>
                     </connections>
                 </button>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-UL-wub">
+                    <frame key="frameInset" minX="147" minY="39" width="110" height="191"/>
+                    <subviews>
+                        <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-0H-Zax">
+                            <state key="normal" title="世界线" backgroundImage="MenuYellowButton">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="2BM-Y7-asf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLz-ey-uci">
+                            <state key="normal" title="给游戏打分" backgroundImage="MenuBlueButton">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="L4N-JA-2lp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-lt-gz8">
+                            <state key="normal" title="关闭音效" backgroundImage="MenuYellowButton">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="oq1-hv-ARQ"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sj3-62-ANI">
+                    <subviews>
+                        <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgo-Zp-Aor">
+                            <state key="normal" title="S.C.P 档案" backgroundImage="MenuBlueButton">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="yKF-oE-lzE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUv-iw-HWT">
+                            <state key="normal" title="快速模式" backgroundImage="MenuYellowButton">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="FtY-QM-Q7S"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cB-WN-nLu">
+                            <state key="normal" title="关闭音乐" backgroundImage="MenuBlueButton">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="dW1-6K-gY0"/>
+                    </constraints>
+                </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="cmJ-2x-QTO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0Uh-Ij-vEg"/>
-                <constraint firstAttribute="trailing" secondItem="GAT-zL-v5o" secondAttribute="trailing" constant="8" id="WQT-ex-T2y"/>
-                <constraint firstItem="GAT-zL-v5o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="air-gc-5iG"/>
-                <constraint firstItem="GAT-zL-v5o" firstAttribute="top" secondItem="cmJ-2x-QTO" secondAttribute="bottom" constant="10" id="bNi-u8-ECu"/>
-                <constraint firstItem="cmJ-2x-QTO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="cWA-G8-WwQ"/>
-                <constraint firstAttribute="bottom" secondItem="GAT-zL-v5o" secondAttribute="bottom" id="qcP-wX-CYP"/>
+                <constraint firstItem="cmJ-2x-QTO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6ZT-2K-Akf"/>
+                <constraint firstAttribute="bottom" secondItem="EDs-UL-wub" secondAttribute="bottom" constant="10" id="AVo-fL-vhw"/>
+                <constraint firstAttribute="bottom" secondItem="bBs-rU-DZS" secondAttribute="bottom" id="DeH-7C-Qat"/>
+                <constraint firstItem="EDs-UL-wub" firstAttribute="top" secondItem="cmJ-2x-QTO" secondAttribute="bottom" constant="15" id="FnJ-k6-d5I"/>
+                <constraint firstItem="bBs-rU-DZS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="I89-Fx-WdG"/>
+                <constraint firstItem="sj3-62-ANI" firstAttribute="top" secondItem="cmJ-2x-QTO" secondAttribute="bottom" constant="15" id="J6u-GJ-5Ue"/>
+                <constraint firstAttribute="bottom" secondItem="sj3-62-ANI" secondAttribute="bottom" constant="10" id="KHE-xT-ueM"/>
+                <constraint firstItem="EDs-UL-wub" firstAttribute="leading" secondItem="Otx-Vs-MXC" secondAttribute="trailing" constant="10" id="KHR-tz-FdU"/>
+                <constraint firstAttribute="bottom" secondItem="Otx-Vs-MXC" secondAttribute="bottom" id="Rwi-ui-Sgk"/>
+                <constraint firstItem="Otx-Vs-MXC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TIp-HQ-PFp"/>
+                <constraint firstItem="bBs-rU-DZS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XnH-ZY-eai"/>
+                <constraint firstItem="cmJ-2x-QTO" firstAttribute="centerX" secondItem="bBs-rU-DZS" secondAttribute="centerX" id="Y77-Bu-UYA"/>
+                <constraint firstItem="Otx-Vs-MXC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aLM-8O-fbg"/>
+                <constraint firstItem="Otx-Vs-MXC" firstAttribute="leading" secondItem="sj3-62-ANI" secondAttribute="trailing" constant="10" id="cZD-GK-3YW"/>
+                <constraint firstAttribute="trailing" secondItem="bBs-rU-DZS" secondAttribute="trailing" id="ogO-A6-55P"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -100,7 +110,13 @@
                 <outlet property="quickModeButton" destination="TUv-iw-HWT" id="gDS-ad-Cnp"/>
                 <outlet property="soundButton" destination="bIF-lt-gz8" id="Wsg-KK-UTU"/>
             </connections>
-            <point key="canvasLocation" x="-9" y="-125"/>
+            <point key="canvasLocation" x="-60" y="-124"/>
         </view>
     </objects>
+    <resources>
+        <image name="MenuBackground" width="260" height="240"/>
+        <image name="MenuBlueButton" width="110" height="53"/>
+        <image name="MenuTopButton" width="50" height="24"/>
+        <image name="MenuYellowButton" width="110" height="53"/>
+    </resources>
 </document>

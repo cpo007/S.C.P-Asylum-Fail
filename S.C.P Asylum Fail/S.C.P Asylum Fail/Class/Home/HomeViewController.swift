@@ -84,12 +84,11 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         view.addSubview(menuView!)
         menuView?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
-            make.top.equalTo(view.snp.bottom).offset(-50)
-            make.leading.equalTo(view).offset(44)
-            make.trailing.equalTo(view).offset(-44)
+            make.top.equalTo(view.snp.bottom).offset(-25)
+            make.leading.equalTo(view).offset(30)
+            make.trailing.equalTo(view).offset(-30)
             make.height.equalTo(Height / 3)
         })
-            menuView?.backgroundColor = ColorPurple()
         
         menuView?.buttonDidClickBlock = { [weak self] tag in
             guard let weakself = self else { return }
@@ -118,7 +117,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     func updateMenuView() {
         
         menuView?.snp.updateConstraints({ (make) in
-            make.top.equalTo(view.snp.bottom).offset(isPop ? -50 : -(Height / 3))
+            make.top.equalTo(view.snp.bottom).offset(isPop ? -25 : -(Height / 3))
         })
         
         UIView.animate(withDuration: 0.3, animations: {
