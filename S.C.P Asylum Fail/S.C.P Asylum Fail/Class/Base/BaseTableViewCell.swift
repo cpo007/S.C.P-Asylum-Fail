@@ -17,7 +17,7 @@ class BaseTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = defultColor()
+        backgroundColor = UIColor.clear
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -30,6 +30,10 @@ class BaseTableViewCell: UITableViewCell {
     
     func updateResourece(theStoryLine:TheStoryLine) {
         self.theStoryLine = theStoryLine
+    }
+    
+    func setCellBackground() {
+        self.backgroundView = UIImageView(image: UIImage(named: "CellBackground"))
     }
 
 }

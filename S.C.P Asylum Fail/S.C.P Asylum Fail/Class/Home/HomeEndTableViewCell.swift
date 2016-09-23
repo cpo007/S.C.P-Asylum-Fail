@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeEndTableViewCell: BaseTableViewCell {
 
@@ -21,17 +22,20 @@ class HomeEndTableViewCell: BaseTableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        endButton?.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
     }
     
     func setupUI() {
         endButton =  getNormalButton(self, action: #selector(HomeEndTableViewCell.buttonDidClick), Title: "Test")
+        endButton?.setBackgroundImage(UIImage(named: "EndButton"), for: .normal)
+        endButton?.setBackgroundImage(UIImage(), for: .selected)
         addSubview(endButton!)
         
-//        let textLbl = getLabel(text: "Tesasdasdasdasdast", font: UIFont.systemFont(ofSize: 14), color: ColorYellow())
-//        textLbl.textAlignment = .center
-//        addSubview(textLbl)
-//        self.textLbl = textLbl
+        endButton?.snp.makeConstraints { (make) in
+            make.leading.equalTo(self).offset(35)
+            make.trailing.equalTo(self).offset(-35)
+            make.top.equalTo(self).offset(10)
+            make.bottom.equalTo(self).offset(-10)
+        }
     }
     
     func buttonDidClick() {

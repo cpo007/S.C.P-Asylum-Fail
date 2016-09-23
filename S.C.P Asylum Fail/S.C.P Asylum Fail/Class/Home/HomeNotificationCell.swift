@@ -23,6 +23,7 @@ class HomeNotificationCell: BaseTableViewCell {
     }
     
     func setupUI() {
+        setCellBackground()
         let textLbl = getLabel(text: "Tesasdasdasdasdast", font: UIFont.systemFont(ofSize: 14), color: ColorYellow())
         textLbl.textAlignment = .center
         addSubview(textLbl)
@@ -33,7 +34,7 @@ class HomeNotificationCell: BaseTableViewCell {
         super.updateResource(theText)
         textLbl?.text = theText.Text
         let isQuick = UserDefaults.standard.bool(forKey: "isQuick")
-        if theText.NotificationTime.intValue > 0 && isQuick {
+        if theText.NotificationTime.intValue > 0 && !isQuick {
             registerLocalNotification(theText.NotificationTime.doubleValue)
         }
     }

@@ -30,9 +30,8 @@ func getNormalButton(_ target:AnyObject,action:Selector,Title:String ,font:UIFon
     button.adjustsImageWhenHighlighted = false
     button.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
     button.setTitle(Title, for: UIControlState())
-    button.setBackgroundImage(colorToImage(ColorYellow()), for: UIControlState())
-    button.setBackgroundImage(colorToImage(ColorBlack()), for: .highlighted)
-    button.setBackgroundImage(colorToImage(ColorBlue()), for: .selected)
+    button.setBackgroundImage(UIImage(named: "NormalButton"), for: .normal)
+    button.setBackgroundImage(UIImage(named: "SelectedButton"), for: .selected)
     if let f = font{
         button.titleLabel?.font = f
     }

@@ -52,11 +52,17 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     
     func setupUI() {
         
+        //设置背景图层
+        let backgroundImageView = UIImageView(frame: view.frame)
+        backgroundImageView.image = UIImage(named: "HomeBackground")
+        view.addSubview(backgroundImageView)
+        
         //主体TableView
         tableView = HomeTableView(frame: CGRect(x: 20, y: 20, width: Width - 40, height: Height - 50))
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.separatorStyle = .none
+        tableView?.backgroundColor = UIColor.clear
         tableView?.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.new, context: nil)
         tableView?.showsVerticalScrollIndicator = false
         view.addSubview(tableView!)
@@ -67,6 +73,12 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         tableView?.register(HomeNotificationCell.self, forCellReuseIdentifier: notificationIdentifier)
         tableView?.register(HomeEndTableViewCell.self, forCellReuseIdentifier: endButtonIdentifier)
 
+        //设置边框图片 该图需要部分遮挡TableView同时不遮挡菜单View
+        let borderImageView = UIImageView(frame: view.frame)
+        borderImageView.image = UIImage(named: "Border")
+        view.addSubview(borderImageView)
+        
+        
         //菜单选项
         menuView = Bundle.main.loadNibNamed("HomeMenuView", owner: nil, options: nil)?.first as? HomeMenuView
         view.addSubview(menuView!)
@@ -145,6 +157,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     }
     
     //初始化数据，若有存档则读取存档，否则读取序章
+    //若从选择故事节点而来则初始化所有数据，从节点对应的故事线开始
     func setupResource(node: TheStoryNode? = nil) {
         if let node = node {
             theStoryArray.removeAll()
@@ -322,10 +335,12 @@ extension HomeViewController {
     
     @objc(tableView:heightForRowAtIndexPath:) func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let theText = theStoryArray[(indexPath as NSIndexPath).row]
-        if theText.Style == 103 {
-            return 120
-        } else {
+        
+        switch theText.CellStyle! {
+        case HomeCellStyle.end, HomeCellStyle.twoButton :
             return 80
+        default :
+            return 120
         }
     }
     

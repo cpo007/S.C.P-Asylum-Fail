@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeInstructionsTableViewCell: BaseTableViewCell {
 
@@ -16,17 +17,19 @@ class HomeInstructionsTableViewCell: BaseTableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
     }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        textLbl?.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
-    }
     
     func setupUI() {
+        setCellBackground()
         let textLbl = getLabel(text: "Tesasdasdasdasdast", font: UIFont.systemFont(ofSize: 14), color: ColorYellow())
         textLbl.textAlignment = .center
         addSubview(textLbl)
         self.textLbl = textLbl
+        
+        textLbl.snp.makeConstraints { (make) in
+            make.leading.equalTo(self).offset(30)
+            make.trailing.equalTo(self).offset(-30)
+            make.centerY.equalTo(self)
+        }
     }
     
     override func updateResource(_ theText: TheText) {

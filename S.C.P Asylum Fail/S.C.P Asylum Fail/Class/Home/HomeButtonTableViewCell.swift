@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 enum buttonType:NSInteger {
     case left = 101
@@ -25,8 +26,8 @@ class HomeButtonTableViewCell: BaseTableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        leftButton?.frame = CGRect(x: 0, y: 0, width: frame.width / 2, height: frame.height)
-        rightButton?.frame = CGRect(x: frame.width / 2, y: 0, width: frame.width / 2, height: frame.height)
+//        leftButton?.frame = CGRect(x: 0, y: 0, width: frame.width / 5 * 3, height: 58)
+//        rightButton?.frame = CGRect(x: frame.width / 2, y: 0, width: frame.width / 5 * 3, height: 58)
     }
     func setupUI() {
         let leftButton = getNormalButton(self, action: #selector(HomeButtonTableViewCell.buttonDidClick(_:)), Title: "Test", font: nil, color: nil, tag: buttonType.left.rawValue)
@@ -40,6 +41,20 @@ class HomeButtonTableViewCell: BaseTableViewCell {
         rightButton.titleLabel?.numberOfLines = 0
         addSubview(rightButton)
         self.rightButton = rightButton
+        
+        leftButton.snp.makeConstraints { (make) in
+//            make.edges.equalTo(UIEdgeInsets(top: 10, left: 12, bottom: -10, right: -12)
+            make.leading.equalTo(self).offset(12)
+            make.trailing.equalTo(self.snp.centerX).offset(-12)
+            make.top.equalTo(self).offset(10)
+            make.bottom.equalTo(self).offset(-10)
+        }
+        rightButton.snp.makeConstraints { (make) in
+            make.trailing.equalTo(self).offset(-12)
+            make.leading.equalTo(self.snp.centerX).offset(12)
+            make.top.equalTo(self).offset(10)
+            make.bottom.equalTo(self).offset(-10)
+        }
     }
     
     func buttonDidClick(_ sender: UIButton) {

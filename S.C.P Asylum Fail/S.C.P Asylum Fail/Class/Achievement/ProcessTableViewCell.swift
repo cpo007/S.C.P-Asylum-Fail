@@ -84,13 +84,13 @@ class ProcessTableViewCell: BaseTableViewCell {
     }
     
     func setupKeepOutView(button:UIButton) {
-//        let view = UIView()
-//        view.backgroundColor = defultColor()
-//        addSubview(view)
-//        view.snp.makeConstraints { (make) in
-//            make.size.equalTo(CGSize(width: 55, height: 55))
-//            make.center.equalTo(button)
-//        }
+        let view = UIView()
+        view.backgroundColor = defultColor()
+        addSubview(view)
+        view.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 55, height: 55))
+            make.center.equalTo(button)
+        }
     }
     
     @IBAction func centerButtonDidClick(_ sender: AnyObject) {
