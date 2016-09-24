@@ -78,36 +78,59 @@ func getSandBoxPath(_ fileName:String) -> String{
 }
 
 //保存数据
-func saveData(_ theStoryArry:[TheText], theTextArry:[TheText]){
-    let sandBoxSavePath = getSandBoxPath("data")
-    let sandBoxMaxSavePath = getSandBoxPath("maxData")
-    if sandBoxSavePath.isEmpty && sandBoxMaxSavePath.isEmpty {
-        print("保存失败")
+//func saveData(_ theStoryArry:[TheText], theTextArry:[TheText]){
+//    let sandBoxSavePath = getSandBoxPath("data")
+//    let sandBoxMaxSavePath = getSandBoxPath("maxData")
+//    if sandBoxSavePath.isEmpty && sandBoxMaxSavePath.isEmpty {
+//        print("保存失败")
+//        return
+//    }
+//    let data = NSKeyedArchiver.archivedData(withRootObject: theStoryArry)
+//    let maxData = NSKeyedArchiver.archivedData(withRootObject: theTextArry)
+//    try? data.write(to: URL(fileURLWithPath: sandBoxSavePath), options: [.atomic])
+//    try? maxData.write(to: URL(fileURLWithPath: sandBoxMaxSavePath), options: [.atomic])
+//    print("保存成功")
+//}
+
+func saveData(_ data: AnyObject, dataName: String){
+    let sandBoxSavePath = getSandBoxPath(dataName)
+    if sandBoxSavePath.isEmpty {
+        print("保存\(dataName)失败")
         return
     }
-    let data = NSKeyedArchiver.archivedData(withRootObject: theStoryArry)
-    let maxData = NSKeyedArchiver.archivedData(withRootObject: theTextArry)
+    let data = NSKeyedArchiver.archivedData(withRootObject: data)
     try? data.write(to: URL(fileURLWithPath: sandBoxSavePath), options: [.atomic])
-    try? maxData.write(to: URL(fileURLWithPath: sandBoxMaxSavePath), options: [.atomic])
-    print("保存成功")
+    print("保存\(dataName)成功")
+
 }
 
 //读取数据
-func reloadData() -> (theStoryArry:[TheText]?, theTextArry:[TheText]?) {
-    let sandBoxSavePath = getSandBoxPath("data")
-    let sandBoxMaxSavePath = getSandBoxPath("maxData")
-    if sandBoxSavePath.isEmpty && sandBoxMaxSavePath.isEmpty {
-        print("读取失败")
+//func reloadData() -> (theStoryArry: [TheText]?, theTextArry: [TheText]?) {
+//    let sandBoxSavePath = getSandBoxPath("data")
+//    let sandBoxMaxSavePath = getSandBoxPath("maxData")
+//    if sandBoxSavePath.isEmpty && sandBoxMaxSavePath.isEmpty {
+//        print("读取失败")
+//    }
+//    let data = try?Data(contentsOf: URL(fileURLWithPath: sandBoxSavePath), options: .dataReadingMapped)
+//    let maxData = try?Data(contentsOf: URL(fileURLWithPath: sandBoxMaxSavePath), options: .dataReadingMapped)
+//    guard let d = data, let m = maxData else {
+//        return (nil,nil)
+//    }
+//    let theStoryArry = NSKeyedUnarchiver.unarchiveObject(with: d) as? [TheText]
+//    let theTextArry = NSKeyedUnarchiver.unarchiveObject(with: m) as? [TheText]
+//    print("读取成功")
+//    return (theStoryArry,theTextArry)
+//}
+
+func reloadData(dataName: String) -> Any? {
+    let sandBoxSavePath = getSandBoxPath(dataName)
+    if sandBoxSavePath.isEmpty {
+        print("读取\(dataName)失败")
     }
-    let data = try?Data(contentsOf: URL(fileURLWithPath: sandBoxSavePath), options: .dataReadingMapped)
-    let maxData = try?Data(contentsOf: URL(fileURLWithPath: sandBoxMaxSavePath), options: .dataReadingMapped)
-    guard let d = data, let m = maxData else {
-        return (nil,nil)
+    if let data = try?Data(contentsOf: URL(fileURLWithPath: sandBoxSavePath), options: .dataReadingMapped) {
+        return NSKeyedUnarchiver.unarchiveObject(with: data)
     }
-    let theStoryArry = NSKeyedUnarchiver.unarchiveObject(with: d) as? [TheText]
-    let theTextArry = NSKeyedUnarchiver.unarchiveObject(with: m) as? [TheText]
-    print("读取成功")
-    return (theStoryArry,theTextArry)
+    return nil
 }
 
 //颜色便利构造
@@ -128,18 +151,23 @@ func defultColor() -> UIColor{
 func ColorBlue () -> UIColor{
     return RGB(red: 125, green: 205, blue: 202)
 }
+
 func ColorYellow () -> UIColor{
     return RGB(red: 251, green: 187, blue: 42)
 }
+
 func ColorOrange () -> UIColor{
     return RGB(red: 244, green: 159, blue: 96)
 }
+
 func ColorRed () -> UIColor{
     return RGB(red: 242, green: 116, blue: 126)
 }
+
 func ColorPurple () -> UIColor{
     return RGB(red: 107, green: 87, blue: 112)
 }
+
 func ColorBlack () -> UIColor{
     return RGB(red: 28, green: 19, blue: 16)
 }

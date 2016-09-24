@@ -8,19 +8,146 @@
 			<key>Style</key>
 			<integer>101</integer>
 			<key>Text</key>
-			<string>警告！警告！</string>
+			<string>[执行射杀D-9587指令]</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>什么？发生啥事了？</string>
 		</dict>
 		<dict>
 			<key>Style</key>
 			<integer>101</integer>
 			<key>Text</key>
-			<string>D-9587生理活性快速下降，预估在5.47秒后归于零点。</string>
+			<string>[激活SCP-173安保设备]</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>卧槽，什么情况？什么情况？！</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>不，我对又黑又长的东西过敏，把它挪开，挪开！</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>不——</string>
 		</dict>
 		<dict>
 			<key>Style</key>
 			<integer>101</integer>
 			<key>Text</key>
-			<string>系统失去与D-9587的链接。</string>
+			<string>[指令执行完毕]</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>101</integer>
+			<key>Text</key>
+			<string>[编号D-9587生理状态归零，偏差值为-0%~+0%]</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>101</integer>
+			<key>Text</key>
+			<string>[已将指令通报值日主管Dr.Konny]</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>101</integer>
+			<key>Text</key>
+			<string>[暂时解除研究员C-132研究员身份]</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>104</integer>
+			<key>Text</key>
+			<string>测试报告显示</string>
+		</dict>
+	</array>
+	<key>Branch102</key>
+	<array>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>……</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>唉——</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>好吧，我相信你们。</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>希望大部队能及时赶到，并且同时不会赏我几颗花生米。</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>现在，我得休息一下了。</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>同时通话跟盯着那家伙让我很累。</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>我只能干一件事。</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>105</integer>
+			<key>Text</key>
+			<string>[D-9587正在作业]</string>
+			<key>NotificationTime</key>
+			<string>720</string>
+			<key>SubText</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>不！詹姆斯，不！</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>102</integer>
+			<key>Text</key>
+			<string>咯——（什么东西被折断的声音）</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>101</integer>
+			<key>Text</key>
+			<string>[编号D-9587生理状态归零，偏差值为-0%~+0%]</string>
+		</dict>
+		<dict>
+			<key>Style</key>
+			<integer>101</integer>
+			<key>Text</key>
+			<string>[失去与D-9587的连接]</string>
 		</dict>
 		<dict>
 			<key>Style</key>

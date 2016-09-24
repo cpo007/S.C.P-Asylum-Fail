@@ -12,7 +12,7 @@
 			<key>IsEnd</key>
 			<false/>
 			<key>HasActivate</key>
-			<false/>
+			<true/>
 			<key>Plist</key>
 			<string>Prologue</string>
 			<key>Branch</key>
@@ -29,15 +29,15 @@
 			<key>HasActivate</key>
 			<false/>
 			<key>IsEnd</key>
-			<false/>
+			<true/>
 			<key>Plist</key>
-			<string>Prologue</string>
+			<string>BadEnd</string>
 			<key>Branch</key>
 			<string>101</string>
 			<key>Title</key>
-			<string>序章</string>
+			<string>射杀致死</string>
 			<key>Detail</key>
-			<string>D-9587“有幸”被选中执行SCP-173例行清理工作，可怜的家伙。</string>
+			<string>你很聪明，若是在一切开始之前就杀死D-9587那么一切故事都不复存在，或许这对D-9587来说不是什么好事，但对于整个基金会来说可谓是万全之策。</string>
 		</dict>
 		<key>CenterNode</key>
 		<dict>
@@ -46,112 +46,15 @@
 			<key>Icon</key>
 			<string></string>
 			<key>Title</key>
-			<string>序章</string>
+			<string>崩坏的开端</string>
 			<key>Detail</key>
-			<string>D-9587“有幸”被选中执行SCP-173例行清理工作，可怜的家伙。</string>
+			<string>也许大部分人都认为这只不过是基金会微不足道的一小点失误，但也有少部分智者预见了在此之后愈演愈烈的混乱。</string>
 			<key>IsEnd</key>
 			<false/>
 			<key>Plist</key>
 			<string>Prologue</string>
 			<key>Branch</key>
-			<string>101</string>
-		</dict>
-	</dict>
-	<dict>
-		<key>Style</key>
-		<integer>102</integer>
-		<key>LeftNode</key>
-		<dict>
-			<key>IsEnd</key>
-			<true/>
-			<key>HasActivate</key>
-			<false/>
-			<key>Plist</key>
-			<string>Prologue</string>
-			<key>Branch</key>
-			<string>101</string>
-		</dict>
-		<key>CenterNode</key>
-		<dict>
-			<key>HasActivate</key>
-			<false/>
-			<key>IsEnd</key>
-			<false/>
-			<key>Plist</key>
-			<string>Prologue</string>
-			<key>Branch</key>
-			<string>101</string>
-			<key>Title</key>
-			<string>序章</string>
-			<key>Detail</key>
-			<string>D-9587“有幸”被选中执行SCP-173例行清理工作，骂骂咧咧的他万万没想到这是一系列噩梦的开端。</string>
-		</dict>
-	</dict>
-	<dict>
-		<key>Style</key>
-		<integer>102</integer>
-		<key>CenterNode</key>
-		<dict>
-			<key>HasActivate</key>
-			<false/>
-			<key>IsEnd</key>
-			<false/>
-			<key>Plist</key>
-			<string>Prologue</string>
-			<key>Branch</key>
-			<string>101</string>
-		</dict>
-		<key>RightNode</key>
-		<dict>
-			<key>HasActivate</key>
-			<false/>
-			<key>IsEnd</key>
-			<false/>
-			<key>Plist</key>
-			<string>Prologue</string>
-			<key>Branch</key>
-			<string>101</string>
-		</dict>
-	</dict>
-	<dict>
-		<key>Style</key>
-		<integer>102</integer>
-		<key>CenterNode</key>
-		<dict>
-			<key>HasActivate</key>
-			<false/>
-			<key>IsEnd</key>
-			<false/>
-			<key>Plist</key>
-			<string>Prologue</string>
-			<key>Branch</key>
-			<string>101</string>
-		</dict>
-		<key>RightNode</key>
-		<dict>
-			<key>HasActivate</key>
-			<false/>
-			<key>IsEnd</key>
-			<true/>
-			<key>Plist</key>
-			<string>Prologue</string>
-			<key>Branch</key>
-			<string>101</string>
-		</dict>
-	</dict>
-	<dict>
-		<key>Style</key>
-		<integer>101</integer>
-		<key>CenterNode</key>
-		<dict>
-			<key>HasActivate</key>
-			<false/>
-			<key>IsEnd</key>
-			<true/>
-			<key>Plist</key>
-			<string>Prologue</string>
-			<key>Branch</key>
-			<string>101</string>
+			<string>104</string>
 		</dict>
 	</dict>
 </array>

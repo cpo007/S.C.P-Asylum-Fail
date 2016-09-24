@@ -28,7 +28,7 @@
                         <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="UBM-CM-WoY"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-UL-wub">
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-UL-wub">
                     <frame key="frameInset" minX="147" minY="39" width="110" height="191"/>
                     <subviews>
                         <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-0H-Zax">
@@ -57,7 +57,7 @@
                         <constraint firstAttribute="width" constant="110" id="oq1-hv-ARQ"/>
                     </constraints>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sj3-62-ANI">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sj3-62-ANI">
                     <subviews>
                         <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgo-Zp-Aor">
                             <state key="normal" title="S.C.P 档案" backgroundImage="MenuBlueButton">

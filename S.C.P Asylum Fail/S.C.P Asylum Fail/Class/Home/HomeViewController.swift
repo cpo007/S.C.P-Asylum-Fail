@@ -36,6 +36,11 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     let endButtonIdentifier = "endButtonIdentifier"
     let twoButtonIdentifier = "twoButtonIdentifier"
     let notificationIdentifier = "notificationIdentifier"
+    
+    let theStoryArrayName = "theStoryArray"
+    let theTextArrayName = "theTextArray"
+    let theStoryLineArrayName = "theStoryLineArrayName"
+
 
 
     override func viewDidLoad() {
@@ -85,9 +90,8 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         menuView?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
             make.top.equalTo(view.snp.bottom).offset(-25)
-            make.leading.equalTo(view).offset(30)
-            make.trailing.equalTo(view).offset(-30)
-            make.height.equalTo(Height / 3)
+            make.height.equalTo(240)
+            make.width.equalTo(260)
         })
         
         menuView?.buttonDidClickBlock = { [weak self] tag in
@@ -100,6 +104,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
                 self?.navigationController?.pushViewController(ArchivesViewController(), animated: true)
                 break
             case HomeMenuButtonStyle.gotoWorldLine.rawValue :
+               weakself.theStoryLineArray = reloadData(dataName: weakself.theStoryLineArrayName) as! [TheStoryLine]
                 let vc = StoryLineViewController(theStoryLineArray: weakself.theStoryLineArray)
                 self?.navigationController?.pushViewController(vc, animated: true)
                 vc.reloadStory = { [weak self] node in
@@ -117,7 +122,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     func updateMenuView() {
         
         menuView?.snp.updateConstraints({ (make) in
-            make.top.equalTo(view.snp.bottom).offset(isPop ? -25 : -(Height / 3))
+            make.top.equalTo(view.snp.bottom).offset(isPop ? -25 : -235)
         })
         
         UIView.animate(withDuration: 0.3, animations: {
@@ -142,16 +147,22 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
             //快速模式中继续故事，非快速模式下激活通知并暂停故事
             timerStop()
         }
-        saveData(theStoryArray, theTextArry: theTextArray)
+        saveData(theStoryArray as AnyObject, dataName: theStoryArrayName)
+        saveData(theTextArray as AnyObject, dataName: theTextArrayName)
     }
     
     //初始化故事线数据,若初次初始化则读取plist文件，否则读取存档
     func setupTheStoryLine() {
-        guard let path = Bundle.main.path(forResource: "StoryLine", ofType: "plist") else { return }
-        guard let array = NSArray(contentsOfFile: path) as? [[String:AnyObject]] else { return }
-        for dic in array{
-            let theStoryLine = TheStoryLine(dict: dic)
-            theStoryLineArray.append(theStoryLine)
+        if let data = reloadData(dataName: theStoryLineArrayName) {
+            theStoryLineArray = data as! [TheStoryLine]
+        } else {
+            guard let path = Bundle.main.path(forResource: "StoryLine", ofType: "plist") else { return }
+            guard let array = NSArray(contentsOfFile: path) as? [[String:AnyObject]] else { return }
+            for dic in array{
+                let theStoryLine = TheStoryLine(dict: dic)
+                theStoryLineArray.append(theStoryLine)
+            }
+            saveData(theStoryLineArray as AnyObject, dataName: theStoryLineArrayName)
         }
     }
     
@@ -174,10 +185,10 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
             timerStart()
             return
         }
-        if let theStoryArry = reloadData().theStoryArry, let theTextArray = reloadData().theTextArry {
-            self.theStoryArray = theStoryArry
-            self.theTextArray = theTextArray
-            storyCount = theStoryArry.count
+        if let data = reloadData(dataName: theStoryArrayName), let maxData = reloadData(dataName: theTextArrayName)  {
+            theStoryArray = data as! [TheText]
+            theTextArray = maxData as! [TheText]
+            storyCount = theStoryArray.count
         } else {
             guard let path = Bundle.main.path(forResource: "Prologue", ofType: "plist") else { return }
             guard let dict = NSDictionary(contentsOfFile: path) as? [String:[AnyObject]] else { return }
@@ -221,6 +232,30 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
                 break
             }
             guard let pN = plistName, let bS = branchString else { return }
+            //在添加新剧本前判断该剧本是否与故事线节点相同，若相同则激活故事线节点
+            for theStoryLine in theStoryLineArray {
+                if let centerNode = theStoryLine.CenterNode {
+                    if pN == centerNode.Plist && bS == getBranchString(centerNode.Branch) {
+                        centerNode.HasActivate = true
+                        saveData(theStoryLineArray as AnyObject, dataName: theStoryLineArrayName)
+                        break
+                    }
+                }
+                if let leftNode = theStoryLine.LeftNode {
+                    if pN == leftNode.Plist && bS == getBranchString(leftNode.Branch) {
+                        leftNode.HasActivate = true
+                        saveData(theStoryLineArray as AnyObject, dataName: theStoryLineArrayName)
+                        break
+                    }
+                }
+                if let rightNode = theStoryLine.CenterNode {
+                    if pN == rightNode.Plist && bS == getBranchString(rightNode.Branch) {
+                        rightNode.HasActivate = true
+                        saveData(theStoryLineArray as AnyObject, dataName: theStoryLineArrayName)
+                        break
+                    }
+                }
+            }
             appendStory(pN, branchString: bS)
         }
     }
