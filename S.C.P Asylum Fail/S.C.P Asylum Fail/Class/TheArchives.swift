@@ -11,7 +11,7 @@ import UIKit
 class TheArchives: NSObject {
     var Icon:String?
     var Number:String?
-    var IsActivation = false
+    var HasActivation = false
     var Project:TheProject?
     
     

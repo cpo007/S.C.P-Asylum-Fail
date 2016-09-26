@@ -28,8 +28,7 @@
                         <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="UBM-CM-WoY"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-UL-wub">
-                    <frame key="frameInset" minX="147" minY="39" width="110" height="191"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-UL-wub">
                     <subviews>
                         <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-0H-Zax">
                             <state key="normal" title="世界线" backgroundImage="MenuYellowButton">

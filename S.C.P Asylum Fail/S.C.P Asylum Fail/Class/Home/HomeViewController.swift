@@ -57,10 +57,6 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     
     func setupUI() {
         
-        //设置背景图层
-        let backgroundImageView = UIImageView(frame: view.frame)
-        backgroundImageView.image = UIImage(named: "HomeBackground")
-        view.addSubview(backgroundImageView)
         
         //主体TableView
         tableView = HomeTableView(frame: CGRect(x: 20, y: 20, width: Width - 40, height: Height - 50))

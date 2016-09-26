@@ -10,9 +10,15 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+    var backgroundImageView: UIImageView?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
+        backgroundImageView = UIImageView(frame: view.frame)
+        backgroundImageView?.image = UIImage(named: "HomeBackground")
+        view.addSubview(backgroundImageView!)
     }
     
     override var prefersStatusBarHidden : Bool {

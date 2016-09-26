@@ -12,21 +12,44 @@ import Koloda
 class ArchivesViewController: BaseViewController {
 
     var theArchivesArray = [TheArchives]()
-    var kolaView:KolodaView?
+    var collectionView: UICollectionView?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
         setupResource()
-        kolaView = KolodaView(frame: CGRect(x: 0, y: 0, width: Width * 2 / 3, height: Height * 2 / 3))
-        kolaView?.center = view.center
-        view.addSubview(kolaView!)
-        kolaView?.delegate = self
-        kolaView?.dataSource = self
+
     }
- 
+    
+    func setupUI() {
+        
+        
+        
+        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView?.dataSource = self
+        collectionView?.backgroundColor = UIColor.clear
+        collectionView?.register(ArchivesPageCollectionViewCell.self, forCellWithReuseIdentifier: "collectionView")
+        collectionView?.isPagingEnabled = true
+        collectionView?.showsVerticalScrollIndicator = false
+        collectionView?.showsHorizontalScrollIndicator = false
+        view.addSubview(collectionView!)
+        resizeCollectionView(size: view.frame.size)
+    }
+    
+    func resizeCollectionView(size: CGSize) {
+        if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.itemSize = view.frame.size
+            layout.minimumInteritemSpacing = 0
+            layout.minimumLineSpacing = 0
+            layout.scrollDirection = .horizontal
+        }
+    }
+
     //初始化S.C.P档案
     func setupResource() {
-        guard let path = Bundle.main.path(forResource: "Archives", ofType: "plist") else { return }
+        guard let path = Bundle.main.path(forResource: "Collection", ofType: "plist") else { return }
         guard let arr = NSArray(contentsOfFile: path) as? [AnyObject] else { return }
         for dict in arr {
             guard let dict = dict as? [String:AnyObject] else { return }
@@ -43,35 +66,21 @@ class ArchivesViewController: BaseViewController {
 
 }
 
-extension ArchivesViewController: KolodaViewDelegate,KolodaViewDataSource {
-    func kolodaNumberOfCards(_ koloda:KolodaView) -> UInt {
-        return UInt(theArchivesArray.count)
+extension ArchivesViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        var a = 0
+        if theArchivesArray.count % 9 > 0 {
+            a = 1
+        }
+        return theArchivesArray.count / 9 + a
     }
     
-    func koloda(_ koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
-        let archive = theArchivesArray[Int(index)]
-        
-        return UIImageView(image: UIImage(named: archive.Icon ?? ""))
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionView", for: indexPath) as! ArchivesPageCollectionViewCell
+//        cell.backgroundColor = RandomColor()
+        return cell
     }
-    
-    func koloda(koloda: KolodaView, viewForCardOverlayAtIndex index: UInt) -> OverlayView? {
-        return Bundle.main.loadNibNamed("OverlayView",
-                                                  owner: self, options: nil)?[0] as? OverlayView
-    }
-    
-    func koloda(_ koloda: KolodaView, didSelectCardAtIndex index: UInt) {
-        guard let endView = Bundle.main.loadNibNamed("ArchiveDetailView", owner: nil, options: nil)?.last as? UIView else { return }
-        endView.frame = Bounds
-        endView.alpha = 0
-        view.addSubview(endView)
-        UIView.animate(withDuration: 0.3, animations: {
-            endView.alpha = 1
-        })
-
-    }
-    
-    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        koloda.resetCurrentCardIndex()
-    }
-
 }
+
+
