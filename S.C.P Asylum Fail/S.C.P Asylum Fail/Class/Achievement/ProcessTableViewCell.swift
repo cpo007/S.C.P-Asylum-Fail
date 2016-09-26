@@ -25,6 +25,8 @@ class ProcessTableViewCell: BaseTableViewCell {
     
     @IBOutlet weak var leftLineTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var rightLineTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var centerLineTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var centerLineBottomConstraint: NSLayoutConstraint!
     
     var nodeDidClick:((TheStoryNode)->())?
     
@@ -35,6 +37,22 @@ class ProcessTableViewCell: BaseTableViewCell {
     
     override func updateResourece(theStoryLine: TheStoryLine) {
         super.updateResourece(theStoryLine: theStoryLine)
+        
+        if theStoryLine.Style == 101, theStoryLine.CenterNode != nil {
+            leftConnectLine.isHidden = true
+            leftLine.isHidden = true
+            leftLine2.isHidden = true
+            leftProcessButton.isHidden = true
+            
+            rightConnectLine.isHidden = true
+            rightLine.isHidden = true
+            rightLine2.isHidden = true
+            rightProcessButton.isHidden = true
+            
+            centerLineTopConstraint.constant = 100
+
+            return
+        }
         
         if theStoryLine.CenterNode == nil {
             centerProcessButton.isHidden = true
@@ -53,10 +71,16 @@ class ProcessTableViewCell: BaseTableViewCell {
         }
         
         if let leftNode = theStoryLine.LeftNode {
+
             if leftNode.IsEnd {
+                if leftNode.JustOne {
+                    leftLine.isHidden = true
+                } else {
+                    leftConnectLine.isHidden = true
+                }
                 leftLine2.isHidden = true
-                leftConnectLine.isHidden = true
-                leftLineTopConstraint.constant = 0
+            } else {
+                leftLine.isHidden = true
             }
             if !leftNode.HasActivate {
                 setupKeepOutView(button: leftProcessButton)
@@ -64,9 +88,14 @@ class ProcessTableViewCell: BaseTableViewCell {
         }
         if let rightNode = theStoryLine.RightNode {
             if rightNode.IsEnd {
+                if rightNode.JustOne {
+                    rightLine.isHidden = true
+                } else {
+                    rightConnectLine.isHidden = true
+                }
                 rightLine2.isHidden = true
-                rightConnectLine.isHidden = true
-                rightLineTopConstraint.constant = 0
+            } else {
+                rightLine.isHidden = true
             }
             if !rightNode.HasActivate {
                 setupKeepOutView(button: rightProcessButton)
@@ -75,6 +104,9 @@ class ProcessTableViewCell: BaseTableViewCell {
         }
         
         if let centerNode = theStoryLine.CenterNode {
+            if centerNode.IsEnd {
+                centerLineBottomConstraint.constant = 100
+            }
             if !centerNode.HasActivate {
                 setupKeepOutView(button: centerProcessButton)
             }

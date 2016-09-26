@@ -7,12 +7,18 @@
 		<integer>101</integer>
 		<key>CenterNode</key>
 		<dict>
-			<key>icon</key>
-			<string></string>
-			<key>IsEnd</key>
-			<false/>
 			<key>HasActivate</key>
+			<false/>
+			<key>JustOne</key>
+			<false/>
+			<key>IsEnd</key>
 			<true/>
+			<key>Icon</key>
+			<string></string>
+			<key>Title</key>
+			<string>开端</string>
+			<key>Detail</key>
+			<string>D-9587认为这一切都是因他而起，他觉得如果他的早餐不是咸豆腐脑而是甜豆腐脑那么之后的一切就不会发生了。</string>
 			<key>Plist</key>
 			<string>Prologue</string>
 			<key>Branch</key>
@@ -24,33 +30,37 @@
 		<integer>102</integer>
 		<key>LeftNode</key>
 		<dict>
-			<key>Icon</key>
-			<string></string>
 			<key>HasActivate</key>
 			<false/>
+			<key>JustOne</key>
+			<true/>
 			<key>IsEnd</key>
 			<true/>
+			<key>Icon</key>
+			<string></string>
+			<key>Title</key>
+			<string>射杀致死</string>
+			<key>Detail</key>
+			<string>我们发现有一部分研究员为了寻乐而不断故意让D级人员送死，我们已经盯紧你们了。</string>
 			<key>Plist</key>
 			<string>BadEnd</string>
 			<key>Branch</key>
 			<string>101</string>
-			<key>Title</key>
-			<string>射杀致死</string>
-			<key>Detail</key>
-			<string>你很聪明，若是在一切开始之前就杀死D-9587那么一切故事都不复存在，或许这对D-9587来说不是什么好事，但对于整个基金会来说可谓是万全之策。</string>
 		</dict>
 		<key>CenterNode</key>
 		<dict>
 			<key>HasActivate</key>
 			<false/>
+			<key>JustOne</key>
+			<false/>
+			<key>IsEnd</key>
+			<true/>
 			<key>Icon</key>
 			<string></string>
 			<key>Title</key>
 			<string>崩坏的开端</string>
 			<key>Detail</key>
-			<string>也许大部分人都认为这只不过是基金会微不足道的一小点失误，但也有少部分智者预见了在此之后愈演愈烈的混乱。</string>
-			<key>IsEnd</key>
-			<false/>
+			<string>给我送那个D级人员去死，该死的，我要知道是哪个研究员认为所有事件的开端真的是因为我们给那个D级人员的早餐出了问题我就把他的脑袋塞进马桶里绑上飞毛腿导弹射进马里亚纳海沟去。</string>
 			<key>Plist</key>
 			<string>Prologue</string>
 			<key>Branch</key>

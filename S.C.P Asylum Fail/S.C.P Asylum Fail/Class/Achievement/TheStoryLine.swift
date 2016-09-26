@@ -51,6 +51,7 @@ class TheStoryLine: NSObject,NSCoding {
 
 class TheStoryNode: NSObject,NSCoding {
     var HasActivate = false
+    var JustOne = false
     var IsEnd = false
     var Plist = "Prologue"
     var Branch = 101
@@ -70,22 +71,24 @@ class TheStoryNode: NSObject,NSCoding {
     required init?(coder aDecoder: NSCoder) {
         super.init()
         HasActivate = aDecoder.decodeBool(forKey: "HasActivate")
+        JustOne = aDecoder.decodeBool(forKey: "JustOne")
         IsEnd = aDecoder.decodeBool(forKey: "IsEnd")
-        Plist = aDecoder.decodeObject(forKey: "Plist") as? String ?? ""
-        Branch = aDecoder.decodeInteger(forKey: "Branch")
         Icon = aDecoder.decodeObject(forKey: "Icon") as? String ?? ""
         Title = aDecoder.decodeObject(forKey: "Title") as? String ?? ""
         Detail = aDecoder.decodeObject(forKey: "Detail") as? String ?? ""
+        Plist = aDecoder.decodeObject(forKey: "Plist") as? String ?? ""
+        Branch = aDecoder.decodeInteger(forKey: "Branch")
     }
 
     func encode(with aCoder: NSCoder) {
         aCoder.encode(HasActivate, forKey: "HasActivate")
         aCoder.encode(IsEnd, forKey: "IsEnd")
-        aCoder.encode(Plist, forKey: "Plist")
-        aCoder.encode(Branch, forKey: "Branch")
+        aCoder.encode(JustOne, forKey: "JustOne")
         aCoder.encode(Icon, forKey: "Icon")
         aCoder.encode(Title, forKey: "Title")
         aCoder.encode(Detail, forKey: "Detail")
+        aCoder.encode(Plist, forKey: "Plist")
+        aCoder.encode(Branch, forKey: "Branch")
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}

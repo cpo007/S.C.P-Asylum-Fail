@@ -60,7 +60,7 @@ extension StoryLineViewController: UITableViewDataSource,UITableViewDelegate {
     
     @objc(tableView:cellForRowAtIndexPath:) func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let theStorLine = theStoryLineArray[indexPath.row]
-        if theStorLine.Style == 101 {
+        if theStorLine.Style == 104 {
             let cell = tableView.dequeueReusableCell(withIdentifier: startIdentifier) as? StartTableViewCell
             cell?.updateResourece(theStoryLine: theStorLine)
             return cell!

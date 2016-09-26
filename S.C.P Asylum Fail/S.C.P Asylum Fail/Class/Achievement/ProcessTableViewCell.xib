@@ -24,7 +24,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10d-kZ-YUu">
                         <color key="backgroundColor" red="0.3928791693" green="0.88099347989999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="8" id="poE-R7-055"/>
+                            <constraint firstAttribute="height" constant="8" id="NQ4-4E-XVI"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgw-gw-i0s">
@@ -37,12 +37,6 @@
                         <color key="backgroundColor" red="0.3928791693" green="0.88099347989999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="8" id="yta-a2-Fjx"/>
-                        </constraints>
-                    </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0K-V9-Ti0">
-                        <color key="backgroundColor" red="0.3928791693" green="0.88099347989999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="8" id="9dg-xK-Jmi"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AR2-NF-0Z6">
@@ -90,39 +84,47 @@
                             <action selector="rightButtonDidClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zNo-un-dyi"/>
                         </connections>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0K-V9-Ti0">
+                        <color key="backgroundColor" red="0.3928791693" green="0.88099347989999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="f7D-BT-dBc"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="M9L-mq-Qfp" firstAttribute="centerX" secondItem="HBe-CY-SiS" secondAttribute="centerX" id="2Me-Ev-RXs"/>
-                    <constraint firstItem="c6W-8j-RhV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2Vv-UZ-j0a"/>
+                    <constraint firstItem="c6W-8j-RhV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2Vv-UZ-j0a"/>
                     <constraint firstItem="BeE-kR-xPW" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="51I-s7-4SP"/>
+                    <constraint firstItem="10d-kZ-YUu" firstAttribute="leading" secondItem="vOd-rN-mtr" secondAttribute="centerX" id="72m-tu-ewE"/>
                     <constraint firstItem="8GT-ua-XrP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BCI-if-4Kw"/>
                     <constraint firstAttribute="bottom" secondItem="AR2-NF-0Z6" secondAttribute="bottom" id="Cxz-dP-h1i"/>
                     <constraint firstAttribute="bottom" secondItem="8GT-ua-XrP" secondAttribute="bottom" id="DVF-qC-18s"/>
                     <constraint firstItem="HBe-CY-SiS" firstAttribute="centerY" secondItem="c6W-8j-RhV" secondAttribute="bottom" id="IEI-Wa-FW8"/>
+                    <constraint firstItem="10d-kZ-YUu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KAx-gb-8Gk"/>
                     <constraint firstAttribute="bottom" secondItem="M9L-mq-Qfp" secondAttribute="bottom" id="LO3-VW-XaX"/>
                     <constraint firstItem="c6W-8j-RhV" firstAttribute="centerX" secondItem="HBe-CY-SiS" secondAttribute="centerX" id="NRb-ji-qed"/>
                     <constraint firstItem="M9L-mq-Qfp" firstAttribute="top" secondItem="HBe-CY-SiS" secondAttribute="centerY" id="Rez-N8-kes"/>
-                    <constraint firstItem="P0K-V9-Ti0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="bTU-N6-irD"/>
-                    <constraint firstItem="8GT-ua-XrP" firstAttribute="leading" secondItem="10d-kZ-YUu" secondAttribute="trailing" id="cNS-dC-h94"/>
                     <constraint firstItem="BeE-kR-xPW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dpb-Gv-3E3"/>
-                    <constraint firstItem="P0K-V9-Ti0" firstAttribute="leading" secondItem="8GT-ua-XrP" secondAttribute="trailing" id="dzV-L9-Nri"/>
-                    <constraint firstItem="dgw-gw-i0s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ffb-jH-D7v"/>
+                    <constraint firstItem="HBe-CY-SiS" firstAttribute="centerX" secondItem="P0K-V9-Ti0" secondAttribute="trailing" id="f8L-gi-aeA"/>
+                    <constraint firstItem="dgw-gw-i0s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ffb-jH-D7v"/>
                     <constraint firstAttribute="centerX" secondItem="vOd-rN-mtr" secondAttribute="trailing" constant="75" id="fmP-BF-IcP"/>
                     <constraint firstItem="AR2-NF-0Z6" firstAttribute="centerX" secondItem="vOd-rN-mtr" secondAttribute="centerX" id="fnT-av-E6e"/>
                     <constraint firstItem="HBe-CY-SiS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gOY-3u-Gm1"/>
-                    <constraint firstItem="P0K-V9-Ti0" firstAttribute="trailing" secondItem="HBe-CY-SiS" secondAttribute="centerX" id="h73-Hr-uND"/>
+                    <constraint firstItem="P0K-V9-Ti0" firstAttribute="leading" secondItem="8GT-ua-XrP" secondAttribute="trailing" id="hmw-eD-dvj"/>
                     <constraint firstItem="HBe-CY-SiS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="75" id="iwJ-NB-bYw"/>
                     <constraint firstItem="AR2-NF-0Z6" firstAttribute="top" secondItem="vOd-rN-mtr" secondAttribute="centerY" id="kgT-8O-o3l"/>
                     <constraint firstItem="vOd-rN-mtr" firstAttribute="centerY" secondItem="dgw-gw-i0s" secondAttribute="bottom" id="m4c-Qs-osA"/>
                     <constraint firstItem="vOd-rN-mtr" firstAttribute="centerY" secondItem="BeE-kR-xPW" secondAttribute="centerY" id="mf9-Ok-Sga"/>
+                    <constraint firstItem="P0K-V9-Ti0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oPJ-fT-0V9"/>
                     <constraint firstItem="8GT-ua-XrP" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="oS7-Vo-96t"/>
-                    <constraint firstItem="10d-kZ-YUu" firstAttribute="leading" secondItem="vOd-rN-mtr" secondAttribute="centerX" id="sVg-Xs-NIl"/>
-                    <constraint firstItem="10d-kZ-YUu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vtE-3e-Eie"/>
                     <constraint firstItem="dgw-gw-i0s" firstAttribute="centerX" secondItem="vOd-rN-mtr" secondAttribute="centerX" id="wZE-H8-bBq"/>
+                    <constraint firstItem="8GT-ua-XrP" firstAttribute="leading" secondItem="10d-kZ-YUu" secondAttribute="trailing" id="zkJ-UP-5Sc"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="centerLine" destination="8GT-ua-XrP" id="Y4c-hu-bFS"/>
+                <outlet property="centerLineBottomConstraint" destination="DVF-qC-18s" id="XsW-Hs-VeG"/>
+                <outlet property="centerLineTopConstraint" destination="BCI-if-4Kw" id="P7P-Ed-8ha"/>
                 <outlet property="centerProcessButton" destination="BeE-kR-xPW" id="AwI-gw-TWm"/>
                 <outlet property="leftConnectLine" destination="10d-kZ-YUu" id="HYa-QL-Ci4"/>
                 <outlet property="leftLine" destination="dgw-gw-i0s" id="uaJ-NA-cxZ"/>
