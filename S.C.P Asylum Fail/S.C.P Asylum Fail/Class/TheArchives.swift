@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TheArchives: NSObject {
+class TheArchives: NSObject,NSCoding {
     var Icon:String?
     var Number:String?
     var HasActivation = false
@@ -27,26 +27,27 @@ class TheArchives: NSObject {
         }
     }
     
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init()
-//        Branch = aDecoder.decodeObjectForKey("Branch") as! Int
-//        Text = aDecoder.decodeObjectForKey("Text") as? String
-//        PlistName = aDecoder.decodeObjectForKey("PlistName") as! String
-//        isSelectod = aDecoder.decodeObjectForKey("isSelectod") as! Bool
-//    }
-//    
-//    func encodeWithCoder(aCoder: NSCoder) {
-//        aCoder.encodeObject(Branch, forKey: "Branch")
-//        aCoder.encodeObject(Text, forKey: "Text")
-//        aCoder.encodeObject(PlistName, forKey: "PlistName")
-//        aCoder.encodeObject(isSelectod, forKey: "isSelectod")
-//    }
-//    
+    required init?(coder aDecoder: NSCoder) {
+        super.init()
+        Icon = aDecoder.decodeObject(forKey: "Icon") as? String
+        Number = aDecoder.decodeObject(forKey: "Number") as? String
+        HasActivation = aDecoder.decodeBool(forKey: "HasActivation")
+        Project = aDecoder.decodeObject(forKey: "Project") as? TheProject
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(HasActivation, forKey: "HasActivation")
+        aCoder.encode(Number, forKey: "Number")
+        aCoder.encode(Icon, forKey: "Icon")
+        aCoder.encode(Project, forKey: "Project")
+    }
+
+    
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}
 
 }
 
-class TheProject: NSObject {
+class TheProject: NSObject,NSCoding {
     
     var Number:String?
     var Icon:String?
@@ -59,5 +60,22 @@ class TheProject: NSObject {
         for (k,v) in dict{
             setValue(v, forKey: k)
         }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init()
+        Number = aDecoder.decodeObject(forKey: "Number") as? String
+        Icon = aDecoder.decodeObject(forKey: "Icon") as? String
+        Level = aDecoder.decodeObject(forKey: "Level") as? String
+        AsylumMeasures = aDecoder.decodeObject(forKey: "AsylumMeasures") as? String
+        Describe = aDecoder.decodeObject(forKey: "Describe") as? String
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(Number, forKey: "Number")
+        aCoder.encode(Icon, forKey: "Icon")
+        aCoder.encode(Level, forKey: "Level")
+        aCoder.encode(AsylumMeasures, forKey: "AsylumMeasures")
+        aCoder.encode(Describe, forKey: "Describe")
     }
 }

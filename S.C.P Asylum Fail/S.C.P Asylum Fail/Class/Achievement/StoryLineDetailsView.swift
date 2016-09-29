@@ -11,7 +11,7 @@ import UIKit
 class StoryLineDetailsView: UIView {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var detailLabel: UITextView!
     var theStoryNode: TheStoryNode?
     var reloadButtonDidClick: (()->())?
     

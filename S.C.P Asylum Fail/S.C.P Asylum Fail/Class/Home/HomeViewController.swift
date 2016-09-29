@@ -17,6 +17,11 @@ enum HomeCellStyle:NSInteger {
     case notification = 105
 }
 
+let theStoryArrayName = "theStoryArray"
+let theTextArrayName = "theTextArray"
+let theStoryLineArrayName = "theStoryLineArray"
+let theArchivesArrayName = "theArchivesArray"
+
 class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
 
     var tableView:HomeTableView?
@@ -24,6 +29,8 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     var theTextArray = [TheText]()
     var theStoryArray = [TheText]()
     var theStoryLineArray = [TheStoryLine]()
+    var theArchivesArray = [TheArchives]()
+    
     var storyCount = 0
     var hasLoad = false
     var isPop = false
@@ -36,18 +43,13 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     let endButtonIdentifier = "endButtonIdentifier"
     let twoButtonIdentifier = "twoButtonIdentifier"
     let notificationIdentifier = "notificationIdentifier"
-    
-    let theStoryArrayName = "theStoryArray"
-    let theTextArrayName = "theTextArray"
-    let theStoryLineArrayName = "theStoryLineArrayName"
-
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupResource()
         setupTheStoryLine()
+        setupTheArchives()
         compareNotificationTime()
     }
     
@@ -100,7 +102,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
                 self?.navigationController?.pushViewController(ArchivesViewController(), animated: true)
                 break
             case HomeMenuButtonStyle.gotoWorldLine.rawValue :
-               weakself.theStoryLineArray = reloadData(dataName: weakself.theStoryLineArrayName) as! [TheStoryLine]
+               weakself.theStoryLineArray = reloadData(dataName: theStoryLineArrayName) as! [TheStoryLine]
                 let vc = StoryLineViewController(theStoryLineArray: weakself.theStoryLineArray)
                 self?.navigationController?.pushViewController(vc, animated: true)
                 vc.reloadStory = { [weak self] node in
@@ -145,6 +147,15 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         }
         saveData(theStoryArray as AnyObject, dataName: theStoryArrayName)
         saveData(theTextArray as AnyObject, dataName: theTextArrayName)
+        
+        guard let number = theText.Number else { return }
+        for theArchives in theArchivesArray{
+            if number == theArchives.Number {
+                theArchives.HasActivation = true
+                saveData(theArchivesArray as AnyObject, dataName: theArchivesArrayName)
+                break
+            }
+        }
     }
     
     //初始化故事线数据,若初次初始化则读取plist文件，否则读取存档
@@ -159,6 +170,22 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
                 theStoryLineArray.append(theStoryLine)
             }
             saveData(theStoryLineArray as AnyObject, dataName: theStoryLineArrayName)
+        }
+    }
+    
+    //初始化S.C.P档案
+    func setupTheArchives() {
+        if let data = reloadData(dataName: theArchivesArrayName){
+            theArchivesArray = data as! [TheArchives]
+        } else {
+            guard let path = Bundle.main.path(forResource: "Collection", ofType: "plist") else { return }
+            guard let arr = NSArray(contentsOfFile: path) as? [AnyObject] else { return }
+            for dict in arr {
+                guard let dict = dict as? [String:AnyObject] else { return }
+                let theArchives = TheArchives(dict: dict)
+                theArchivesArray.append(theArchives)
+            }
+            saveData(theArchivesArray as AnyObject, dataName: theArchivesArrayName)
         }
     }
     
@@ -287,6 +314,8 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
             let notificationTime = UserDefaults.standard.double(forKey: "NotificationTime")
             let historyOfTime = UserDefaults.standard.double(forKey: "HistoryOfTime")
             let currentTime = Date().timeIntervalSince1970
+            print(currentTime - historyOfTime)
+            print(notificationTime)
             if currentTime - historyOfTime > notificationTime {
                 print("激活")
                 timerStart()
@@ -373,6 +402,5 @@ extension HomeViewController {
             return 120
         }
     }
-    
 
 }

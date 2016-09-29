@@ -7,18 +7,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="3zL-ot-EX0">
+        <view contentMode="scaleToFill" id="3zL-ot-EX0" customClass="ArchiveDetailView" customModule="S_C_P_Asylum_Fail" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4UU-kr-xDU">
                     <subviews>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xf9-NH-V64">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xf9-NH-V64">
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="301" placeholderIntrinsicHeight="263" image="●●|●●●●●|●●|●2" translatesAutoresizingMaskIntoConstraints="NO" id="YyB-am-06K"/>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  SCP-173" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsY-Qk-XEp">
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsY-Qk-XEp">
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -32,7 +31,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfi-b0-hEx">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCP-173" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfi-b0-hEx">
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -91,6 +90,9 @@
                         <constraint firstAttribute="trailing" secondItem="xf9-NH-V64" secondAttribute="trailing" id="evk-Gt-DaC"/>
                         <constraint firstAttribute="bottom" secondItem="xf9-NH-V64" secondAttribute="bottom" id="qkB-GV-M46"/>
                     </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="3zL-ot-EX0" id="97S-6f-C0B"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -101,7 +103,14 @@
                 <constraint firstAttribute="bottom" secondItem="4UU-kr-xDU" secondAttribute="bottom" id="Mha-dZ-p0R"/>
                 <constraint firstAttribute="trailing" secondItem="4UU-kr-xDU" secondAttribute="trailing" id="Pzr-mf-LEf"/>
             </constraints>
-            <point key="canvasLocation" x="955.5" y="152.5"/>
+            <connections>
+                <outlet property="asylumMeasures" destination="7kF-T5-cWv" id="ysZ-oN-JIS"/>
+                <outlet property="describe" destination="B5l-PD-kha" id="a9f-ta-VId"/>
+                <outlet property="icon" destination="YyB-am-06K" id="knd-MX-mrg"/>
+                <outlet property="level" destination="VsY-Qk-XEp" id="R55-Fv-nN7"/>
+                <outlet property="number" destination="Mfi-b0-hEx" id="0hK-P4-rZa"/>
+            </connections>
+            <point key="canvasLocation" x="955" y="152"/>
         </view>
     </objects>
     <resources>

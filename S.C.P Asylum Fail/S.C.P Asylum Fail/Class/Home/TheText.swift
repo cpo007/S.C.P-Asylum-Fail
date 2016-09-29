@@ -16,6 +16,8 @@ class TheText: NSObject,NSCoding {
         }
     }
     var Text: String = ""
+    var Number: String?
+    
     var SubText: String = ""
     var NotificationTime: NSNumber = 0
     var LeftButton: TheButton?
@@ -42,6 +44,7 @@ class TheText: NSObject,NSCoding {
         super.init()
         Style = aDecoder.decodeObject(forKey: "Style") as! NSNumber
         Text = aDecoder.decodeObject(forKey: "Text") as! String
+        Number = aDecoder.decodeObject(forKey: "Number") as? String
         SubText = aDecoder.decodeObject(forKey: "SubText") as! String
         LeftButton = aDecoder.decodeObject(forKey: "LeftButton") as? TheButton
         RightButton = aDecoder.decodeObject(forKey: "RightButton") as? TheButton
@@ -51,6 +54,7 @@ class TheText: NSObject,NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(Style, forKey: "Style")
         aCoder.encode(Text, forKey: "Text")
+        aCoder.encode(Number, forKey: "Number")
         aCoder.encode(SubText, forKey: "SubText")
         aCoder.encode(LeftButton, forKey: "LeftButton")
         aCoder.encode(RightButton, forKey: "RightButton")

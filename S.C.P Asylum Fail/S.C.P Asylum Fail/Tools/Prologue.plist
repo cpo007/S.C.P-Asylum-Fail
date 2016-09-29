@@ -106,6 +106,8 @@
 			<integer>101</integer>
 			<key>Text</key>
 			<string>[开始执行SCP-173例行清理任务，SCP-173相关文档已存入临时档案]</string>
+			<key>Number</key>
+			<string>SCP-173</string>
 			<key>SubText</key>
 			<string></string>
 		</dict>
@@ -268,14 +270,6 @@
 			<integer>101</integer>
 			<key>Text</key>
 			<string>[点对点联系建立成功，现在研究员C-132可与D-9587交流]</string>
-			<key>SubText</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>Style</key>
-			<integer>101</integer>
-			<key>Text</key>
-			<string>[编号D-9587心理状态稳定，偏差值为-10%~+10%]</string>
 			<key>SubText</key>
 			<string></string>
 		</dict>
