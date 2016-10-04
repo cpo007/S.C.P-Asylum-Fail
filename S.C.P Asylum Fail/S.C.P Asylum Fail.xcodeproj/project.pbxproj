@@ -33,6 +33,8 @@
 		3832CE271D99077000B3D79D /* ArchiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3832CE251D99077000B3D79D /* ArchiveCollectionViewCell.xib */; };
 		3832CE291D992AB400B3D79D /* ArchivesPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832CE281D992AB400B3D79D /* ArchivesPageCollectionViewCell.swift */; };
 		3864AD8A1D9CD6880034375A /* ArchiveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864AD891D9CD6880034375A /* ArchiveDetailView.swift */; };
+		3864AD9F1DA3CFEB0034375A /* ArchivesNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864AD9E1DA3CFEB0034375A /* ArchivesNavView.swift */; };
+		3864ADA11DA3CFFC0034375A /* ArchivesNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3864ADA01DA3CFFC0034375A /* ArchivesNavView.xib */; };
 		387D05131D8FC5BC006870F8 /* HomeEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D05121D8FC5BC006870F8 /* HomeEndView.swift */; };
 		387D05151D8FC5C8006870F8 /* HomeEndView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387D05141D8FC5C8006870F8 /* HomeEndView.xib */; };
 		38B402CE1D8134C9009959A5 /* HomeEndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */; };
@@ -79,6 +81,8 @@
 		3832CE251D99077000B3D79D /* ArchiveCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArchiveCollectionViewCell.xib; sourceTree = "<group>"; };
 		3832CE281D992AB400B3D79D /* ArchivesPageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchivesPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		3864AD891D9CD6880034375A /* ArchiveDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveDetailView.swift; sourceTree = "<group>"; };
+		3864AD9E1DA3CFEB0034375A /* ArchivesNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchivesNavView.swift; sourceTree = "<group>"; };
+		3864ADA01DA3CFFC0034375A /* ArchivesNavView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArchivesNavView.xib; sourceTree = "<group>"; };
 		387D05121D8FC5BC006870F8 /* HomeEndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEndView.swift; sourceTree = "<group>"; };
 		387D05141D8FC5C8006870F8 /* HomeEndView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeEndView.xib; sourceTree = "<group>"; };
 		38B402CD1D8134C9009959A5 /* HomeEndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEndTableViewCell.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 				3832CE241D99077000B3D79D /* ArchiveCollectionViewCell.swift */,
 				3832CE251D99077000B3D79D /* ArchiveCollectionViewCell.xib */,
 				3832CE281D992AB400B3D79D /* ArchivesPageCollectionViewCell.swift */,
+				3864ADA01DA3CFFC0034375A /* ArchivesNavView.xib */,
+				3864AD9E1DA3CFEB0034375A /* ArchivesNavView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 				38FC5DC71D19457E00D115AD /* LaunchScreen.storyboard in Resources */,
 				3832CE271D99077000B3D79D /* ArchiveCollectionViewCell.xib in Resources */,
 				38FC5DC41D19457E00D115AD /* Assets.xcassets in Resources */,
+				3864ADA11DA3CFFC0034375A /* ArchivesNavView.xib in Resources */,
 				387D05151D8FC5C8006870F8 /* HomeEndView.xib in Resources */,
 				38F286B61D91154600A44478 /* StoryLine.plist in Resources */,
 				3821AA221D7D514B0071FD01 /* HomeMenuView.xib in Resources */,
@@ -516,6 +523,7 @@
 				382A3C3C1D6718780093B51A /* TheText.swift in Sources */,
 				38F286C11D9118E200A44478 /* ProcessTableViewCell.swift in Sources */,
 				3832CE231D98F9FB00B3D79D /* ArchivesCollectionView.swift in Sources */,
+				3864AD9F1DA3CFEB0034375A /* ArchivesNavView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

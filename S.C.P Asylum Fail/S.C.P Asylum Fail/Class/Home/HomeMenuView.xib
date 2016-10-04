@@ -38,7 +38,7 @@
                                 <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="2BM-Y7-asf"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLz-ey-uci">
+                        <button opaque="NO" tag="204" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLz-ey-uci">
                             <state key="normal" title="给游戏打分" backgroundImage="MenuBlueButton">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -46,7 +46,7 @@
                                 <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="L4N-JA-2lp"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-lt-gz8">
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-lt-gz8">
                             <state key="normal" title="关闭音效" backgroundImage="MenuYellowButton">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -74,7 +74,7 @@
                                 <action selector="buttonDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="FtY-QM-Q7S"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cB-WN-nLu">
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cB-WN-nLu">
                             <state key="normal" title="关闭音乐" backgroundImage="MenuBlueButton">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>

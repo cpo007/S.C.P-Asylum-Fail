@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Koloda
+import SnapKit
 
 class ArchivesViewController: BaseViewController {
 
@@ -40,13 +40,27 @@ class ArchivesViewController: BaseViewController {
         
         //Border
         
-        if let c = collectionView {
-            let borderView = UIImageView(frame: CGRect(x: 0, y: 0, width: c.frame.width + 20, height: c.frame.height))
-            borderView.image = UIImage(named: "Border2")
-            borderView.center = CGPoint(x: c.center.x, y: c.center.y - 20 )
-            view.addSubview(borderView)
+        let borderView = UIImageView(frame: CGRect(x: 0, y: 0, width: collectionView!.frame.width + 20, height: collectionView!.frame.height))
+        borderView.image = UIImage(named: "Border2")
+        borderView.center = CGPoint(x: collectionView!.center.x, y: collectionView!.center.y - 20 )
+        view.addSubview(borderView)
+        
+        let backButton = getNormalButton(self, action: #selector(ArchivesViewController.backButtonDidClick), Title: "", font: nil, color: nil, tag: nil)
+        backButton.setImage(UIImage(named: "BackButtonNormal"), for: .normal)
+        backButton.setImage(UIImage(named: "BackButtonHigh"), for: .highlighted)
+        view.addSubview(backButton)
+        backButton.snp.makeConstraints { (make) in
+            make.top.equalTo(collectionView!.snp.bottom).offset(10)
+            make.leading.equalTo(collectionView!)
+            make.height.equalTo(60)
+            make.width.equalTo(180)
         }
         
+        
+    }
+    
+    func backButtonDidClick() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func resizeCollectionView(size: CGSize) {
