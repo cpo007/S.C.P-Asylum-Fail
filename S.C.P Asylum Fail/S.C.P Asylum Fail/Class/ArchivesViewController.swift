@@ -60,7 +60,7 @@ class ArchivesViewController: BaseViewController {
     }
     
     func backButtonDidClick() {
-        self.navigationController?.popViewController(animated: true)
+        if let nav = self.navigationController { nav.popViewController(animated: true) }
     }
     
     func resizeCollectionView(size: CGSize) {

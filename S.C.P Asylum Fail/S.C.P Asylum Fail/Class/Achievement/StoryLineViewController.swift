@@ -77,7 +77,7 @@ extension StoryLineViewController: UITableViewDataSource,UITableViewDelegate {
                     detailView.alpha = 1
                 })
                 detailView.reloadButtonDidClick = {
-                    self?.navigationController?.popViewController(animated: true)
+                    if let nav = self?.navigationController { nav.popViewController(animated: true) }
                     self?.reloadStory?(node)
                 }
                 
