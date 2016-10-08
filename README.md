@@ -15,5 +15,9 @@
 
 你可以尽情地使用下载这个App用自己想象的故事填充它，我非常高兴你这么做，想象及编写是美妙的过程。
 
-
-
+#App预览
+![](https://github.com/cpo007/S.C.P-Asylum-Fail/blob/master/Image/Launch.png)
+![](https://github.com/cpo007/S.C.P-Asylum-Fail/blob/master/Image/Home.png)
+![收集界面](https://github.com/cpo007/S.C.P-Asylum-Fail/blob/master/Image/Collection.png)
+![](https://github.com/cpo007/S.C.P-Asylum-Fail/blob/master/Image/Detail.png)
+![](https://github.com/cpo007/S.C.P-Asylum-Fail/blob/master/Image/StoryLine.png)
